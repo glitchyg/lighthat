@@ -18,7 +18,7 @@ def test_text():
 def get_text_image(text, width, height):
     print("Testing")
 
-    img = Image.new('RGB', (width, height), (0, 100, 0))
+    img = Image.new('RGB', (width, height), (0, 0, 100))
 
     # font = ImageFont.truetype("arial.ttf", 1)
 

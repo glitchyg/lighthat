@@ -126,7 +126,7 @@ def show_rgb_image(strip, rgb_img):
     for x in range(HAT_WIDTH):
         for y in range(HAT_HEIGHT):
             r, g, b = rgb_img.getpixel((x, y))
-            strip.setPixelColor(getCorrectedPixelIndex(i), Color(r, g, b))  #G,
+            strip.setPixelColor(getCorrectedPixelIndex(i), Color(g, r, b))  #G, R, B
             i += 1
     strip.show()
 

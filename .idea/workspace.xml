@@ -26,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="displaycontroller.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="displaycontroller.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/displaycontroller.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="296">
-              <caret line="128" column="79" lean-forward="true" selection-start-line="128" selection-start-column="79" selection-end-line="128" selection-end-column="79" />
+              <caret line="128" column="71" lean-forward="false" selection-start-line="128" selection-start-column="71" selection-end-line="128" selection-end-column="71" />
               <folding>
                 <element signature="e#25#36#0" expanded="true" />
               </folding>
@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="textcontroller.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="textcontroller.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/textcontroller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="519">
-              <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+            <state relative-caret-position="371">
+              <caret line="20" column="54" lean-forward="false" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -98,8 +98,8 @@
         <option value="$PROJECT_DIR$/strandtest.py" />
         <option value="$PROJECT_DIR$/LostCode" />
         <option value="$PROJECT_DIR$/lighthat.py" />
-        <option value="$PROJECT_DIR$/displaycontroller.py" />
         <option value="$PROJECT_DIR$/textcontroller.py" />
+        <option value="$PROJECT_DIR$/displaycontroller.py" />
       </list>
     </option>
   </component>
@@ -324,22 +324,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/displaycontroller.py">
+    <entry file="file://$PROJECT_DIR$/textcontroller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="128" column="79" lean-forward="true" selection-start-line="128" selection-start-column="79" selection-end-line="128" selection-end-column="79" />
+        <state relative-caret-position="371">
+          <caret line="20" column="54" lean-forward="false" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
           <folding>
-            <element signature="e#25#36#0" expanded="true" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/textcontroller.py">
+    <entry file="file://$PROJECT_DIR$/displaycontroller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+        <state relative-caret-position="296">
+          <caret line="128" column="71" lean-forward="false" selection-start-line="128" selection-start-column="71" selection-end-line="128" selection-end-column="71" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#25#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
