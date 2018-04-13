@@ -6,12 +6,14 @@ import time
 import displaycontroller as hatDisplay
 from neopixel import Color
 
-
 settings = {
     "text": "hello world"
 }
 
+
 def main_state_thread(settings):
+    strip = hatDisplay.init_display_controller()
+
     while True:
         # hatDisplay.colorWipe(strip, Color(0, 0, 0), 0)
         for x in range(0, -1000, -1):
@@ -21,10 +23,10 @@ def main_state_thread(settings):
 
 # Main program logic follows:
 if __name__ == '__main__':
-
-    strip = hatDisplay.init_display_controller()
-
-    thread.start_new_thread(main_state_thread, (settings, ))
+    try:
+        thread.start_new_thread(main_state_thread, (settings,))
+    except:
+        print "Error: unable to start thread"
 
     # # Process arguments
     # parser = argparse.ArgumentParser()
