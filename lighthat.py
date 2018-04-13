@@ -44,7 +44,7 @@ def setupCorrectedPixelIndex():
     pushIt(191, 160)
     pushIt(351, 320)
     pushIt(192, 223)
-    pushIt(290, 319)
+    pushIt(288, 319)
     pushIt(255, 224)
     pushIt(287, 256)
 
