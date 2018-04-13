@@ -3,17 +3,6 @@ from PIL import ImageFont
 from PIL import ImageDraw
 
 
-def test_text():
-    print("Testing")
-
-    img = Image.new('RGB', (64, 8), (100, 0, 0))
-
-    rgb_img = img.convert('RGB')
-    r, g, b = rgb_img.getpixel((0, 0))
-
-    print(r, g, b)
-
-
 def get_image(file):
     img = Image.open(file)
     rgb_img = img.convert('RGB')
@@ -55,13 +44,6 @@ def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False):
 
     if saveImage:
         img.save('temp1.png')
-
-    # # Flip the image
-    # flipped_image = img.transpose(Image.FLIP_TOP_BOTTOM)
-    # flipped_image.save('temp2.png')
-    #
-
-    return_image = Image.open('calibrate.png')
 
     rgb_img = img.convert('RGB')
 

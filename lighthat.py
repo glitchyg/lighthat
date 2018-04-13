@@ -5,6 +5,12 @@ import time
 import displaycontroller as hatDisplay
 from neopixel import Color
 
+
+
+
+
+
+
 # Main program logic follows:
 if __name__ == '__main__':
 
