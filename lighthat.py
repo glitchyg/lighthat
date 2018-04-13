@@ -28,6 +28,9 @@ if __name__ == '__main__':
     except:
         print "Error: unable to start thread"
 
+    while 1:
+        pass
+
     # # Process arguments
     # parser = argparse.ArgumentParser()
     # parser.add_argument('-c', '--clear', action='store_true', help='clear the display on exit')
