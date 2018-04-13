@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
         while True:
             # hatDisplay.colorWipe(strip, Color(0, 0, 0), 0)
-            for x in range(1000):
+            for x in range(0, -1000, -1):
                 hatDisplay.show_text(strip, "HELLO WORLD", x, True)
                 time.sleep(0.05)
             time.sleep(60)
