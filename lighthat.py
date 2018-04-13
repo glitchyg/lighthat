@@ -17,7 +17,7 @@ def main_state_thread(settings):
     while True:
         # hatDisplay.colorWipe(strip, Color(0, 0, 0), 0)
         for x in range(0, -1000, -1):
-            hatDisplay.show_text(strip, settings.text, x, True)
+            hatDisplay.show_text(strip, settings["text"], x, True)
             time.sleep(0.05)
 
 
