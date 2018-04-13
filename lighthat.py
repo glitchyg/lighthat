@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
-import _thread
+import thread
 import time
 import displaycontroller as hatDisplay
 from neopixel import Color
