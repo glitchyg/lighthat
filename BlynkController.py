@@ -1,12 +1,10 @@
 import BlynkLib
 import time
 import logging
-import random
 
 logging.basicConfig(level=logging.DEBUG)
 
 auth_token = '8827f3156d054ed4b9eb899e8ad9c17f'
-
 
 def virtual_write_callback(value, pin, state, blynk_ref):
     print(value)
@@ -31,11 +29,3 @@ def blinkay(blynk, delay):
     while now_in_ms() < end:
         # Do Nothing
         blynk.stride()
-
-
-logging.getLogger().info("Running...")
-
-blynk = init_blynk()
-print("HELLO")
-blinkay(blynk, 60000)
-print("Bye")
