@@ -63,11 +63,11 @@ def theaterChase(strip, color, wait_ms=50, iterations=10):
     for j in range(iterations):
         for q in range(3):
             for i in range(0, strip.numPixels(), 3):
-                strip.setPixelColor(i + q, color)
+                strip.setPixelColor(pixelIndexes[i + q], color)
             strip.show()
             time.sleep(wait_ms / 1000.0)
             for i in range(0, strip.numPixels(), 3):
-                strip.setPixelColor(i + q, 0)
+                strip.setPixelColor(pixelIndexes[i + q], 0)
 
 
 def wheel(pos):
@@ -86,7 +86,7 @@ def rainbow(strip, wait_ms=20, iterations=1):
     """Draw rainbow that fades across all pixels at once."""
     for j in range(256 * iterations):
         for i in range(strip.numPixels()):
-            strip.setPixelColor(i, wheel((i + j) & 255))
+            strip.setPixelColor(pixelIndexes[i], wheel((i + j) & 255))
         strip.show()
         time.sleep(wait_ms / 1000.0)
 
@@ -95,7 +95,7 @@ def rainbowCycle(strip, wait_ms=20, iterations=5):
     """Draw rainbow that uniformly distributes itself across all pixels."""
     for j in range(256 * iterations):
         for i in range(strip.numPixels()):
-            strip.setPixelColor(i, wheel((int(i * 256 / strip.numPixels()) + j) & 255))
+            strip.setPixelColor(pixelIndexes[i], wheel((int(i * 256 / strip.numPixels()) + j) & 255))
         strip.show()
         time.sleep(wait_ms / 1000.0)
 
@@ -105,11 +105,11 @@ def theaterChaseRainbow(strip, wait_ms=50):
     for j in range(256):
         for q in range(3):
             for i in range(0, strip.numPixels(), 3):
-                strip.setPixelColor(i + q, wheel((i + j) % 255))
+                strip.setPixelColor(pixelIndexes[i + q], wheel((i + j) % 255))
             strip.show()
             time.sleep(wait_ms / 1000.0)
             for i in range(0, strip.numPixels(), 3):
-                strip.setPixelColor(i + q, 0)
+                strip.setPixelColor(pixelIndexes[i + q], 0)
 
 
 
@@ -136,9 +136,9 @@ if __name__ == '__main__':
 
         while True:
             print('Color wipe animations.')
-            colorWipe(strip, Color(255, 0, 0))  # Red wipe
-            colorWipe(strip, Color(0, 255, 0))  # Blue wipe
-            colorWipe(strip, Color(0, 0, 255))  # Green wipe
+            colorWipe(strip, Color(255, 0, 0), 10)  # Red wipe
+            colorWipe(strip, Color(0, 255, 0), 10)  # Blue wipe
+            colorWipe(strip, Color(0, 0, 255), 10)  # Green wipe
             print('Theater chase animations.')
             theaterChase(strip, Color(127, 127, 127))  # White theater chase
             theaterChase(strip, Color(127, 0, 0))  # Red theater chase
