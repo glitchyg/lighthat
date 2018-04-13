@@ -2,7 +2,7 @@
 
 import argparse
 import displaycontroller as hatDisplay
-
+from neopixel import *
 
 # Main program logic follows:
 if __name__ == '__main__':
