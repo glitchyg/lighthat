@@ -50,8 +50,8 @@ def setupCorrectedPixelIndex():
 
 
 def getCorrectedPixelIndex(i):
-    if i > len(pixelIndexes):
-        return pixelIndexes[len(pixelIndexes)]
+    if i >= len(pixelIndexes):
+        return pixelIndexes[len(pixelIndexes) - 1]
     else:
         return pixelIndexes[i]
 
