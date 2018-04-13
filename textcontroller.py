@@ -33,7 +33,7 @@ def get_text_image(text, width, height):
 
     return_image = Image.open('calibrate.png')
 
-    rgb_img = return_image.convert('RGB')
+    rgb_img = img.convert('RGB')
 
     return rgb_img
 
