@@ -25,7 +25,7 @@ def get_text_image(text, width, height):
     fnt = ImageFont.truetype('8bit.ttf', 8)
 
     d = ImageDraw.Draw(img)
-    d.text((0, 0), text, font=fnt, fill=(0, 255, 0))
+    # d.text((0, 0), text, font=fnt, fill=(0, 255, 0))
 
     img.save('temp.png')
 
