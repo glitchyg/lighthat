@@ -24,11 +24,13 @@ def get_text_image(text, width, height):
     d = ImageDraw.Draw(img)
     d.text((0, 0), text, font=fnt, fill=(0, 255, 0))
 
+    img.save('temp1.png')
+
     # Flip the image
     flipped_image = img.transpose(Image.FLIP_TOP_BOTTOM)
-    flipped_image.save('temp.png')
+    flipped_image.save('temp2.png')
 
-    return_image = Image.open('temp.png')
+    return_image = Image.open('temp2.png')
 
     rgb_img = return_image.convert('RGB')
 
