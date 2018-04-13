@@ -21,6 +21,8 @@ def get_image(file):
 
 
 def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False):
+    TOP_OFFSET = 1
+
     img = Image.new('RGB', (width, height), (0, 0, 0))
 
     fnt = ImageFont.truetype('munro.ttf', 7)
@@ -32,22 +34,16 @@ def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False):
     if offset >= width:
         offset = offset % width
 
-    d.text((offset, 1), text, font=fnt, fill=(0, 255, 0))
+    d.text((offset, TOP_OFFSET), text, font=fnt, fill=(0, 255, 0))
 
     if wrap:
         # Get the size of the text we are going to draw
         size = d.textsize(text, font=fnt)
-        # d.text((offset, 0), text, font=fnt, fill=(0, 255, 0))
 
         # Check if we even need to wrap.
         if offset + size[0] > width:
-
-
             wrap_offset = 0 - (width - offset)
-
-            # print(offset, size[0], width, wrap_offset)
-
-            d.text((wrap_offset, 0), text, font=fnt, fill=(0, 255, 0))
+            d.text((wrap_offset, TOP_OFFSET), text, font=fnt, fill=(0, 255, 0))
 
     if saveImage:
         img.save('temp1.png')
