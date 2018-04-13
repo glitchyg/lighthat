@@ -24,7 +24,7 @@ def get_text_image(text, width, height):
     d = ImageDraw.Draw(img)
     d.text((0, 0), text, font=fnt, fill=(0, 255, 0))
 
-    img.save('temp1.png')
+    # img.save('temp1.png')
 
     # # Flip the image
     # flipped_image = img.transpose(Image.FLIP_TOP_BOTTOM)
