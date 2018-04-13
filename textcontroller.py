@@ -30,19 +30,27 @@ def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False):
     # Create the drawer to place the text
     d = ImageDraw.Draw(img)
 
+    # Get the size of the text we are going to draw
+    size = d.textsize(text, font=fnt)
+
     # Wrap the offset if we need to
     if offset >= width:
         offset = offset % width
 
+    if offset <= -width:
+        offset = -(offset % width)
+
     d.text((offset, TOP_OFFSET), text, font=fnt, fill=(0, 255, 0))
 
     if wrap:
-        # Get the size of the text we are going to draw
-        size = d.textsize(text, font=fnt)
-
-        # Check if we even need to wrap.
+        # Check if we even need to wrap forward.
         if offset + size[0] > width:
             wrap_offset = 0 - (width - offset)
+            d.text((wrap_offset, TOP_OFFSET), text, font=fnt, fill=(0, 255, 0))
+
+        if offset < 0:
+            wrap_offset = (width - abs(offset))
+            # print(size[0], width, offset, wrap_offset)
             d.text((wrap_offset, TOP_OFFSET), text, font=fnt, fill=(0, 255, 0))
 
     if saveImage:
@@ -60,5 +68,5 @@ def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False):
     return rgb_img
 
 
-get_text_image("HELLO WORLD", 64, 8, 40, True, True)
+get_text_image("HELLO WORLD", 64, 8, -10, True, True)
 
