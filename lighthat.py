@@ -1,9 +1,21 @@
 #!/usr/bin/env python3
 
 import argparse
+import BlynkLib
 import time
 import displaycontroller as hatDisplay
 from neopixel import Color
+
+auth_token = '8827f3156d054ed4b9eb899e8ad9c17f'
+
+blynk = BlynkLib.Blynk(auth_token)
+
+def virtual_write_callback(value, pin, state, blynk_ref):
+    print(value)
+    # access the neccessary virtual output and write the value
+    return
+
+blynk.add_virtual_pin(pin=0, write=virtual_write_callback)
 
 
 
@@ -45,6 +57,9 @@ if __name__ == '__main__':
             hatDisplay.rainbow(strip)
             hatDisplay.rainbowCycle(strip)
             hatDisplay.theaterChaseRainbow(strip)
+
+            blynk.stride()
+
 
     except KeyboardInterrupt:
         if args.clear:

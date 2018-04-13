@@ -494,6 +494,12 @@ class Blynk:
     def disconnect(self):
         self._do_connect = False
 
+    def stride(self):
+        try:
+            self._run()
+        except:
+            time.sleep(2)
+
     def run(self):
         """
         Run the Blynk client in a blocking mode, catching and eating
