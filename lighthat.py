@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     strip = hatDisplay.init_display_controller()
 
-    thread.start_new_thread(main_state_thread, settings)
+    thread.start_new_thread(main_state_thread, (settings))
 
     # # Process arguments
     # parser = argparse.ArgumentParser()
