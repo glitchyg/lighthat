@@ -3,7 +3,8 @@
 import argparse
 import thread
 import time
-import displaycontroller as hatDisplay
+import displaycontroller as hat_display
+import webinterface as web
 from neopixel import Color
 
 settings = {
@@ -12,19 +13,20 @@ settings = {
 
 
 def main_state_thread(settings):
-    strip = hatDisplay.init_display_controller()
+    strip = hat_display.init_display_controller()
 
     while True:
         # hatDisplay.colorWipe(strip, Color(0, 0, 0), 0)
         for x in range(0, -1000, -1):
-            hatDisplay.show_text(strip, settings["text"], x, True)
-            time.sleep(0.05)
+            hat_display.show_text(strip, settings["text"], x, True)
+            time.sleep(0.01)
 
 
 # Main program logic follows:
 if __name__ == '__main__':
     try:
         thread.start_new_thread(main_state_thread, (settings,))
+        thread.start_new_thread(web.web_interface_thread, (settings,))
     except:
         print "Error: unable to start thread"
 
