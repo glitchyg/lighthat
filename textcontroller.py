@@ -30,9 +30,10 @@ def get_text_image(text, width, height):
     # flipped_image = img.transpose(Image.FLIP_TOP_BOTTOM)
     # flipped_image.save('temp2.png')
     #
-    # return_image = Image.open('temp2.png')
 
-    rgb_img = img.convert('RGB')
+    return_image = Image.open('calibrate.png')
+
+    rgb_img = return_image.convert('RGB')
 
     return rgb_img
 
