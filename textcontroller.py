@@ -32,7 +32,7 @@ def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False):
     if offset >= width:
         offset = offset % width
 
-    d.text((offset, 0), text, font=fnt, fill=(0, 255, 0))
+    d.text((offset, 1), text, font=fnt, fill=(0, 255, 0))
 
     if wrap:
         # Get the size of the text we are going to draw
