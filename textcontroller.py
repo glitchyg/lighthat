@@ -38,7 +38,7 @@ def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False):
         offset = offset % width
 
     if offset <= -width:
-        offset = -(offset % width)
+        offset = (offset % width)
 
     d.text((offset, TOP_OFFSET), text, font=fnt, fill=(0, 255, 0))
 
