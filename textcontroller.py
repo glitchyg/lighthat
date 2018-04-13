@@ -43,9 +43,9 @@ def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False):
         if offset + size[0] > width:
 
 
-            wrap_offset = 0 - (width - size[0]) + 2
+            wrap_offset = 0 - (width - offset)
 
-            # print(size[0], width, wrap_offset)
+            print(offset, size[0], width, wrap_offset)
 
             d.text((wrap_offset, 0), text, font=fnt, fill=(0, 255, 0))
 
