@@ -2,12 +2,11 @@ from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
 
-def test_text():
 
+def test_text():
     print("Testing")
 
     img = Image.new('RGB', (64, 8), (100, 0, 0))
-
 
     rgb_img = img.convert('RGB')
     r, g, b = rgb_img.getpixel((0, 0))
@@ -20,16 +19,16 @@ def get_text_image(text, width, height):
 
     img = Image.new('RGB', (width, height), (0, 0, 100))
 
-    # font = ImageFont.truetype("arial.ttf", 1)
-
     fnt = ImageFont.truetype('8bit.ttf', 8)
 
     d = ImageDraw.Draw(img)
-    # d.text((0, 0), text, font=fnt, fill=(0, 255, 0))
+    d.text((0, 0), text, font=fnt, fill=(0, 255, 0))
 
-    img.save('temp.png')
+    # Flip the image
+    flipped_image = img.transpose(Image.FLIP_TOP_BOTTOM)
+    flipped_image.save('temp.png')
 
-    rgb_img = img.convert('RGB')
+    rgb_img = flipped_image.convert('RGB')
 
     return rgb_img
 
