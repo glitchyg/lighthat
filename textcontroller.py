@@ -19,7 +19,7 @@ def get_text_image(text, width, height):
 
     img = Image.new('RGB', (width, height), (0, 0, 100))
 
-    fnt = ImageFont.truetype('8bit.ttf', 8)
+    fnt = ImageFont.truetype('8bit.ttf', 7)
 
     d = ImageDraw.Draw(img)
     d.text((0, 0), text, font=fnt, fill=(0, 255, 0))
