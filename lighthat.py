@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
         while True:
             hatDisplay.show_simple_text(strip, "Hello World")
-            time.sleep(5)
+            time.sleep(60)
             # print('Color wipe animations.')
             # colorWipe(strip, Color(255, 0, 0), 10)  # Red wipe
             # colorWipe(strip, Color(0, 255, 0), 10)  # Blue wipe
