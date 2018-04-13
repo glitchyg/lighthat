@@ -28,7 +28,7 @@ def setupCorrectedPixelIndex():
         if start > end:
             for i in range(end, start + 1):
                 pixelIndexes.append(i)
-        else
+        else:
             for i in range (start, end + 1):
                 pixelIndexes.append(i)
     pushIt(0, 31)
