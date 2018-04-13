@@ -5,6 +5,10 @@ import BlynkLib
 import time
 import displaycontroller as hatDisplay
 from neopixel import Color
+import logging
+import random
+
+logging.basicConfig(level=logging.DEBUG)
 
 auth_token = '8827f3156d054ed4b9eb899e8ad9c17f'
 
@@ -18,7 +22,7 @@ def virtual_write_callback(value, pin, state, blynk_ref):
 blynk.add_virtual_pin(pin=0, write=virtual_write_callback)
 
 
-
+logging.getLogger().info("Running...")
 
 
 
