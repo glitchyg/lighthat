@@ -1,36 +1,17 @@
 #!/usr/bin/env python3
 
+import BlynkController
+from BlynkController import blinkay
 import argparse
-import BlynkLib
 import time
 import displaycontroller as hatDisplay
 from neopixel import Color
-import logging
-import random
-
-logging.basicConfig(level=logging.DEBUG)
-
-auth_token = '8827f3156d054ed4b9eb899e8ad9c17f'
-
-blynk = BlynkLib.Blynk(auth_token)
-
-def virtual_write_callback(value, pin, state, blynk_ref):
-    print(value)
-    # access the neccessary virtual output and write the value
-    return
-
-blynk.add_virtual_pin(pin=0, write=virtual_write_callback)
-
-
-logging.getLogger().info("Running...")
-
-
-
 
 # Main program logic follows:
 if __name__ == '__main__':
 
     strip = hatDisplay.init_display_controller()
+    blynk = BlynkController.init_blynk()
 
     # Process arguments
     parser = argparse.ArgumentParser()
@@ -47,20 +28,20 @@ if __name__ == '__main__':
             # hatDisplay.colorWipe(strip, Color(0, 0, 0), 0)
             for x in range(0, -1000, -1):
                 hatDisplay.show_text(strip, "HELLO WORLD", x, True)
-                time.sleep(0.05)
-            time.sleep(60)
+                blinkay(blynk, 100)
+            # time.sleep(60)
             # print('Color wipe animations.')
             # colorWipe(strip, Color(255, 0, 0), 10)  # Red wipe
             # colorWipe(strip, Color(0, 255, 0), 10)  # Blue wipe
             # colorWipe(strip, Color(0, 0, 255), 10)  # Green wipe
-            print('Theater chase animations.')
-            hatDisplay.theaterChase(strip, Color(127, 127, 127))  # White theater chase
-            hatDisplay.theaterChase(strip, Color(127, 0, 0))  # Red theater chase
-            hatDisplay.theaterChase(strip, Color(0, 0, 127))  # Blue theater chase
-            print('Rainbow animations.')
-            hatDisplay.rainbow(strip)
-            hatDisplay.rainbowCycle(strip)
-            hatDisplay.theaterChaseRainbow(strip)
+            # print('Theater chase animations.')
+            # hatDisplay.theaterChase(strip, Color(127, 127, 127))  # White theater chase
+            # hatDisplay.theaterChase(strip, Color(127, 0, 0))  # Red theater chase
+            # hatDisplay.theaterChase(strip, Color(0, 0, 127))  # Blue theater chase
+            # print('Rainbow animations.')
+            # hatDisplay.rainbow(strip)
+            # hatDisplay.rainbowCycle(strip)
+            # hatDisplay.theaterChaseRainbow(strip)
 
             blynk.stride()
 
