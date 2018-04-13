@@ -20,7 +20,7 @@ def get_image(file):
     return rgb_img
 
 
-def get_text_image(text, width, height, offset=0, wrap=False):
+def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False):
     img = Image.new('RGB', (width, height), (0, 0, 0))
 
     fnt = ImageFont.truetype('munro.ttf', 7)
@@ -34,10 +34,23 @@ def get_text_image(text, width, height, offset=0, wrap=False):
 
     d.text((offset, 0), text, font=fnt, fill=(0, 255, 0))
 
-    # Get the size of the text we are going to draw
-    size = d.textsize(text, font=fnt)
+    if wrap:
+        # Get the size of the text we are going to draw
+        size = d.textsize(text, font=fnt)
+        # d.text((offset, 0), text, font=fnt, fill=(0, 255, 0))
 
-    # img.save('temp1.png')
+        # Check if we even need to wrap.
+        if offset + size[0] > width:
+
+
+            wrap_offset = 0 - (width - size[0]) + 2
+
+            print(size[0], width, wrap_offset)
+
+            d.text((wrap_offset, 0), text, font=fnt, fill=(0, 255, 0))
+
+    if saveImage:
+        img.save('temp1.png')
 
     # # Flip the image
     # flipped_image = img.transpose(Image.FLIP_TOP_BOTTOM)
@@ -51,5 +64,5 @@ def get_text_image(text, width, height, offset=0, wrap=False):
     return rgb_img
 
 
-get_text_image("HELLO", 64, 8)
+get_text_image("HELLO WORLD", 64, 8, 40, True, True)
 
