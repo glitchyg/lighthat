@@ -2,7 +2,7 @@
 
 import argparse
 import displaycontroller as hatDisplay
-from neopixel import *
+from neopixel import Color
 
 # Main program logic follows:
 if __name__ == '__main__':
@@ -21,6 +21,7 @@ if __name__ == '__main__':
     try:
 
         while True:
+            hatDisplay.show_simple_text(strip, "Hello World")
             # print('Color wipe animations.')
             # colorWipe(strip, Color(255, 0, 0), 10)  # Red wipe
             # colorWipe(strip, Color(0, 255, 0), 10)  # Blue wipe

@@ -3,6 +3,8 @@
 
 import time
 from neopixel import *
+from PIL import Image
+import textcontroller as tc
 import argparse
 import math
 
@@ -15,6 +17,9 @@ LED_DMA = 10  # DMA channel to use for generating signal (try 10)
 LED_BRIGHTNESS = 20  # Set to 0 for darkest and 255 for brightest
 LED_INVERT = False  # True to invert the signal (when using NPN transistor level shift)
 LED_CHANNEL = 0  # set to '1' for GPIOs 13, 19, 41, 45 or 53
+
+HAT_WIDTH = 64
+HAT_HEIGHT = 8
 
 pixelIndexes = []
 
@@ -114,6 +119,19 @@ def theaterChaseRainbow(strip, wait_ms=50):
             time.sleep(wait_ms / 1000.0)
             for i in range(0, strip.numPixels(), 3):
                 strip.setPixelColor(getCorrectedPixelIndex(i + q), 0)
+
+
+def show_rgb_image(strip, rgb_img):
+    i = 0
+    for x in range(HAT_WIDTH):
+        for y in range(HAT_HEIGHT):
+            r, g, b = rgb_img.getpixel((x, y))
+            strip.setPixelColor(getCorrectedPixelIndex(i), Color(r, g, b))
+
+
+def show_simple_text(strip, text):
+    rgb_img = tc.get_text_image(text, HAT_WIDTH, HAT_HEIGHT)
+    show_rgb_image(strip, rgb_img)
 
 
 def init_display_controller():
