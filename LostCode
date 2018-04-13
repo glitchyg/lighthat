@@ -1,0 +1,24 @@
+def setupCorrectedPixelIndex():
+# Abounded Code
+#     STRIP_ROW_COUNT = 28.0
+#     for index in range(0, 512):
+#         # So the strips are 28 long and we have two of them
+#         strip = math.floor(float(index) / STRIP_ROW_COUNT) % 2  #THis gets what
+#         row = math.floor(float(index) / 56.0)
+#         oddRow = (row % 2 == 1)
+#         realIndex = -1
+#         overallStartIndex = -1
+#         if strip == 0:
+#             overallStartIndex = row * (STRIP_ROW_COUNT * 2)
+#             rowIndex = index - overallStartIndex
+#             stripRowStartIndex = STRIP_ROW_COUNT * row
+#             if oddRow:
+#                 realIndex = stripRowStartIndex + (STRIP_ROW_COUNT - rowIndex)
+#             else:
+#                 realIndex = stripRowStartIndex + rowIndex
+#         else:
+#             overallStartIndex = (row * (STRIP_ROW_COUNT * 2)) + STRIP_ROW_COUNT
+#             rowIndex = index - overallStartIndex
+#
+#
+#         pixelIndexes[index] = realIndex
