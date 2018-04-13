@@ -21,7 +21,7 @@ def get_text_image(text, width, height):
 
     img = Image.new('RGB', (width, height), (100, 0, 0))
 
-    font = ImageFont.truetype("arial.ttf", 1)
+    # font = ImageFont.truetype("arial.ttf", 1)
 
     d = ImageDraw.Draw(img)
     d.text((0, 7), text, fill=(0, 255, 0))
