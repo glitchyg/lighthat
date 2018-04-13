@@ -123,9 +123,9 @@ def theaterChaseRainbow(strip, wait_ms=50):
 
 def show_rgb_image(strip, rgb_img):
     i = 0
-    for x in range(HAT_WIDTH):
-        for y in range(HAT_HEIGHT):
-            r, g, b = rgb_img.getpixel((y, x))
+    for y in range(HAT_HEIGHT):
+        for x in range(HAT_WIDTH):
+            r, g, b = rgb_img.getpixel((x, y))
             strip.setPixelColor(getCorrectedPixelIndex(i), Color(g, r, b))  #G, R, B
             i += 1
     strip.show()
