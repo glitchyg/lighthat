@@ -14,15 +14,28 @@ def test_text():
     print(r, g, b)
 
 
-def get_text_image(text, width, height):
-    print("Testing")
+def get_image(file):
+    img = Image.open(file)
+    rgb_img = img.convert('RGB')
+    return rgb_img
 
-    img = Image.new('RGB', (width, height), (0, 0, 100))
 
-    fnt = ImageFont.truetype('8bit.ttf', 7)
+def get_text_image(text, width, height, offset=0, wrap=False):
+    img = Image.new('RGB', (width, height), (0, 0, 0))
 
+    fnt = ImageFont.truetype('munro.ttf', 7)
+
+    # Create the drawer to place the text
     d = ImageDraw.Draw(img)
-    d.text((0, 0), text, font=fnt, fill=(0, 255, 0))
+
+    # Wrap the offset if we need to
+    if offset >= width:
+        offset = 0
+
+    d.text((offset, 0), text, font=fnt, fill=(0, 255, 0))
+
+    # Get the size of the text we are going to draw
+    size = d.textsize(text, font=fnt)
 
     # img.save('temp1.png')
 

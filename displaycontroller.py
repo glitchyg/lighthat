@@ -131,6 +131,11 @@ def show_rgb_image(strip, rgb_img):
     strip.show()
 
 
+def show_text(strip, text, offset, wrap):
+    rgb_img = tc.get_text_image(text, HAT_WIDTH, HAT_HEIGHT, offset, wrap)
+    show_rgb_image(strip, rgb_img)
+
+
 def show_simple_text(strip, text):
     rgb_img = tc.get_text_image(text, HAT_WIDTH, HAT_HEIGHT)
     show_rgb_image(strip, rgb_img)
