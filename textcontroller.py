@@ -28,9 +28,12 @@ def get_text_image(text, width, height):
     flipped_image = img.transpose(Image.FLIP_TOP_BOTTOM)
     flipped_image.save('temp.png')
 
-    rgb_img = flipped_image.convert('RGB')
+    return_image = Image.open('temp.png')
+
+    rgb_img = return_image.convert('RGB')
 
     return rgb_img
 
 
 get_text_image("HELLO", 64, 8)
+
