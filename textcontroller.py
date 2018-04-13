@@ -32,7 +32,7 @@ def get_text_image(text, width, height):
 
     return_image = Image.open('temp2.png')
 
-    rgb_img = return_image.convert('RGB')
+    rgb_img = flipped_image.convert('RGB')
 
     return rgb_img
 
