@@ -25,7 +25,7 @@ if __name__ == '__main__':
             # hatDisplay.colorWipe(strip, Color(0, 0, 0), 0)
             for x in range(1000):
                 hatDisplay.show_text(strip, "HELLO WORLD", x, True)
-                time.sleep(0.1)
+                # time.sleep(0.1)
             time.sleep(60)
             # print('Color wipe animations.')
             # colorWipe(strip, Color(255, 0, 0), 10)  # Red wipe

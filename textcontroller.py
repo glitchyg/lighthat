@@ -45,7 +45,7 @@ def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False):
 
             wrap_offset = 0 - (width - offset)
 
-            print(offset, size[0], width, wrap_offset)
+            # print(offset, size[0], width, wrap_offset)
 
             d.text((wrap_offset, 0), text, font=fnt, fill=(0, 255, 0))
 
