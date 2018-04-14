@@ -26,6 +26,8 @@ def main_state_thread(settings):
     settings = sc.start_mode(settings, "text_and_chase")
     run_counter = 0
     last_mode_button_state = False
+    hat_display.fill(strip, 0)
+    strip.show()
 
     while True:
         mode = (settings["mode"])
