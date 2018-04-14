@@ -21,20 +21,20 @@ modes = {
     "default2": {
         "text": "Works",
         "text_scroll_speed": -1,
-        "text_text_color": 800
+        "text_text_color": (255, 255, 255)
     },
     "default": {
         "text": "Hello World",
         "mode": MODE_TEXT,
-        "text_bg_color": PColor(0, 0, 0),
-        "text_text_color": PColor(0, 40, 25),
+        "text_bg_color": (0, 0, 0),
+        "text_text_color": (0, 40, 25),
         "text_scroll_speed": -0.5
     },
     "penis": {
         "text": "penis",
         "mode": MODE_TEXT,
-        "text_bg_color": PColor(0, 0, 0),
-        "text_text_color": PColor(255, 255, 255),
+        "text_bg_color": (0, 0, 0),
+        "text_text_color": (255, 255, 255),
         "text_scroll_speed": -2
     }
 }
@@ -45,7 +45,9 @@ current_mode = 0
 
 
 def merge_two_dicts(x, y):
-    x["text_text_color"] = PColor(90,0,255)
+    tc = y["text_text_color"]
+
+    x["text_text_color"] = PColor(tc[0], tc[1], tc[2])
 
     # print(type(x["text_text_color"]))
     # z = x.copy()  # start with x's keys and values
