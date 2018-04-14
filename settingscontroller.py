@@ -71,13 +71,26 @@ modes = {
         "mode": MODE_IMAGE,
         "image_file": "calibrate.png",
         "image_show_strip": True
+    },
+    "custom_text_file": {
+        "mode": MODE_TEXT,
+        "text": "EMPTY",
+        "text_bg_color": (0, 0, 0),
+        "text_text_color": (0, 0, 255),
+        "text_scroll_speed": -0.5,
+        "text_show_strip": True
     }
 
 }
 
-mode_playlist = ["default", "penis", "wipe"]
+mode_playlist = ["default", "penis", "wipe", "custom_text_file"]
 
 current_mode = 0
+
+
+def is_custom_text_mode():
+    global mode_playlist, current_mode
+    return mode_playlist[current_mode] == "custom_text_file"
 
 
 def reset_settings(settings):

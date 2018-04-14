@@ -90,6 +90,13 @@ def main_state_thread(settings):
             settings = sc.reset_settings(settings)
             settings = sc.trigger_next_mode(settings)
 
+            # Check if we entered the mode to show text file
+            if sc.is_custom_text_mode():
+                content = "Failed"
+                with open("custom_text.txt") as f:
+                    content = f.readline()
+                settings["text"] = content
+
         last_mode_button_state = input_state
 
 
