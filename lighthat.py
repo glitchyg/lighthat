@@ -16,7 +16,7 @@ settings = {
     "text_bg_mode": TEXT_MODE_SOLID,
     "text_bg_color": (0, 0, 0),
     "text_text_color": (255, 0, 0),
-    "text_scroll_speed": -1,
+    "text_scroll_speed": -0.5,
     "mode": MODE_TEXT,
     "interrupt": False
 }
