@@ -22,7 +22,7 @@ modes = {
         "mode": MODE_TEXT,
         "text": "WORKS",
         "text_bg_color": (0, 0, 0),
-        "text_text_color": (0, 40, 25),
+        "text_text_color": (0, 0, 255),
         "text_scroll_speed": -0.5
     },
     "penis": {
