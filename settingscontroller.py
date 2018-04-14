@@ -19,6 +19,9 @@ default_settings = {
 
 modes = {
     "default": {
+        "text": "Works"
+    },
+    "default2": {
         "text": "Hello World",
         "mode": MODE_TEXT,
         "text_bg_color": (0, 0, 0),
@@ -50,7 +53,7 @@ def start_mode(settings, mode):
     mode_data = modes[mode]
     # print(mode_data)
     print(mode, mode_data, settings)
-    # settings = merge_two_dicts(settings, mode_data)
+    settings = merge_two_dicts(settings, mode_data)
     print(settings)
     return settings
 
