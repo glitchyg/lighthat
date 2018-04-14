@@ -143,9 +143,15 @@ modes = {
         "rainbow_show": True,
         "rainbow_speed": 6,
     },
+    "sonic": {
+        "mode": MODE_IMAGE,
+        "image_show": True,
+        "image_file": "sonic.png",
+        "image_show_strip": True,
+    },
 }
 
-mode_playlist = ["default", "skyline", "frog_eyes", "rainbow", "openworks", "cats", "adventure_time", "matrix",
+mode_playlist = ["default", "skyline", "sonic", "frog_eyes", "rainbow", "openworks", "cats", "adventure_time", "matrix",
                  "custom_text_file_0", "custom_text_file_1"]
 
 current_mode = 0
