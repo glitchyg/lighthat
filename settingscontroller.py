@@ -53,7 +53,7 @@ def merge_two_dicts(current, new):
     updated["text_text_color"] = PColor(tc[0], tc[1], tc[2])
     # print(type(z["text_text_color"]))
 
-    return z
+    return updated
 
 
 def start_mode(settings, mode):
