@@ -41,7 +41,8 @@ def main_state_thread(settings):
         if mode == MODE_TEXT:
             scroll_pos = settings["text_scroll_speed"] * run_counter
             hat_display.show_text(strip, settings["text"], scroll_pos, True, settings["text_text_color"], settings["text_bg_color"])
-            time.sleep(0.01)
+            print (scroll_pos)
+            time.sleep(0.10)
 
 
         run_counter += 1
@@ -51,7 +52,7 @@ def main_state_thread(settings):
 if __name__ == '__main__':
     try:
         thread.start_new_thread(main_state_thread, (settings,))
-        thread.start_new_thread(web.web_interface_thread, (settings,))
+        # thread.start_new_thread(web.web_interface_thread, (settings,))
     except:
         print "Error: unable to start thread"
 
