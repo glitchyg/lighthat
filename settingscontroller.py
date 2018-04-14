@@ -47,8 +47,7 @@ current_mode = 0
 def merge_two_dicts(x, y):
     # I know this is hacky
 
-
-    # x["text_text_color"] = y["text_text_color"]
+    x["text_text_color"] = Color(0, 255, 255)
 
     return x
 
