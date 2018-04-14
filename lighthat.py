@@ -23,14 +23,14 @@ def interrupted(settings):
 
 def main_state_thread(settings):
     strip = hat_display.init_display_controller()
-    settings = sc.start_mode(settings, "text_and_chase")
+    settings = sc.start_mode(settings, "chase")
     run_counter = 0
     last_mode_button_state = False
     hat_display.fill(strip, 0)
     strip.show()
 
     while True:
-        mode = (settings["chase"])
+        mode = (settings["mode"])
 
         #  --------  MODE TEXT AND CHASE --------
         if mode == sc.MODE_TEXT_AND_CHASE:
