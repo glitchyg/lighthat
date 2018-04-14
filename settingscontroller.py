@@ -141,7 +141,7 @@ modes = {
         "image_show_strip": True,
         "image_mask": True,
         "rainbow_show": True,
-        "rainbow_speed": 4,
+        "rainbow_speed": 6,
     },
 }
 
