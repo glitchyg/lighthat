@@ -49,11 +49,13 @@ def merge_two_dicts(current, new):
     updated.update(new)  # modifies z with y's keys and values & returns None
 
     # Uhhg, some kind of bug. Have to do this shit to get around it
-    ttc = new["text_text_color"]
-    updated["text_text_color"] = PColor(ttc[0], ttc[1], ttc[2])
+    if "text_text_color" in new:
+        ttc = new["text_text_color"]
+        updated["text_text_color"] = PColor(ttc[0], ttc[1], ttc[2])
 
-    tbc = new["text_bg_color"]
-    updated["text_bg_color"] = PColor(tbc[0], tbc[1], tbc[2])
+    if "text_bg_color" in new:
+        tbc = new["text_bg_color"]
+        updated["text_bg_color"] = PColor(tbc[0], tbc[1], tbc[2])
 
     return updated
 
