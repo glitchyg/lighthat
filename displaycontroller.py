@@ -73,15 +73,12 @@ def colorWipe(strip, run_counter, color, wait_ms=50):
     return False
 
 
-# def fake_eq(strip, run_counter, color)
-
 # Define functions which animate LEDs in various ways.
 def fill(strip, color):
     """Wipe color across display a pixel at a time."""
     for i in range(strip.numPixels()):
         strip.setPixelColor(i, color)
     # strip.show()
-
 
 
 def theaterChase(strip, run_counter, color, wait_ms=50):
@@ -107,7 +104,6 @@ def rainbow(strip, run_counter):
     j = run_counter % 256
     for i in range(strip.numPixels()):
         strip.setPixelColor(getCorrectedPixelIndex(i), wheel((i + j) & 255))
-
 
 
 def rainbowCycle(strip, wait_ms=20, iterations=5):
@@ -138,7 +134,7 @@ def show_rgb_image(strip, rgb_img, mask):
             r, g, b = rgb_img.getpixel((x, y))
             empty = ((r + g + b) == 0)
             if (not mask) or (mask and not empty):
-                strip.setPixelColor(getCorrectedPixelIndex(i), Color(g, r, b))  #G, R, B
+                strip.setPixelColor(getCorrectedPixelIndex(i), Color(g, r, b))  # G, R, B
             i += 1
 
 
