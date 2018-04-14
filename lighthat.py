@@ -39,6 +39,8 @@ def main_state_thread(settings):
             # print("b")
             finished = hat_display.colorWipe(strip, run_counter, settings["wipe_color"], settings["wipe_delay"])
             if finished:
+                run_counter = 0
+                hat_display.fill(strip, 0)
                 settings = sc.trigger_next_mode(settings)
 
         run_counter += 1
@@ -47,6 +49,8 @@ def main_state_thread(settings):
         input_state = GPIO.input(16)
         if input_state == False and last_mode_button_state == True:
             print("Button Pushed")
+            run_counter = 0
+            hat_display.fill(strip, 0)
             settings = sc.trigger_next_mode(settings)
 
         last_mode_button_state = input_state

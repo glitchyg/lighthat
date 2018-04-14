@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30e0bfbb-bf2a-44d6-8001-69097c8a0d6a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/displaycontroller.py" afterPath="$PROJECT_DIR$/displaycontroller.py" />
       <change beforePath="$PROJECT_DIR$/lighthat.py" afterPath="$PROJECT_DIR$/lighthat.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="675">
-      <file leaf-file-name="lighthat.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lighthat.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lighthat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="49" column="53" lean-forward="false" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
+            <state relative-caret-position="851">
+              <caret line="53" column="43" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="43" />
               <folding>
                 <element signature="e#24#47#0" expanded="true" />
               </folding>
@@ -25,11 +26,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settingscontroller.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="displaycontroller.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/displaycontroller.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <folding>
+                <element signature="e#25#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settingscontroller.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/settingscontroller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1432">
-              <caret line="65" column="11" lean-forward="false" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="11" />
+            <state relative-caret-position="487">
+              <caret line="72" column="4" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -42,18 +55,6 @@
               <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
               <folding>
                 <element signature="e#133#146#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="displaycontroller.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/displaycontroller.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1406">
-              <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-              <folding>
-                <element signature="e#25#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,11 +133,11 @@
         <option value="$PROJECT_DIR$/BlynkLib.py" />
         <option value="$PROJECT_DIR$/BlynkController.py" />
         <option value="$PROJECT_DIR$/webinterface.py" />
-        <option value="$PROJECT_DIR$/displaycontroller.py" />
         <option value="$PROJECT_DIR$/neopixel.py" />
         <option value="$PROJECT_DIR$/textcontroller.py" />
         <option value="$PROJECT_DIR$/settingscontroller.py" />
         <option value="$PROJECT_DIR$/TestButton.py" />
+        <option value="$PROJECT_DIR$/displaycontroller.py" />
         <option value="$PROJECT_DIR$/lighthat.py" />
       </list>
     </option>
@@ -534,16 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/displaycontroller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1406">
-          <caret line="64" column="34" lean-forward="false" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-          <folding>
-            <element signature="e#25#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/textcontroller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -574,21 +565,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settingscontroller.py">
+    <entry file="file://$PROJECT_DIR$/displaycontroller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1432">
-          <caret line="65" column="11" lean-forward="false" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="629">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lighthat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="49" column="53" lean-forward="false" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
+        <state relative-caret-position="851">
+          <caret line="53" column="43" lean-forward="false" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="43" />
           <folding>
             <element signature="e#24#47#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settingscontroller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="72" column="4" lean-forward="false" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
