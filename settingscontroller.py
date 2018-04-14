@@ -28,6 +28,7 @@ default_settings = {
     "image_show": False,
     "image_mask": False,
     "rainbow_show": False,
+    "rainbow_speed": 1
 }
 
 modes = {
@@ -140,10 +141,12 @@ modes = {
         "image_show_strip": True,
         "image_mask": True,
         "rainbow_show": True,
+        "rainbow_speed": 2,
     },
 }
 
-mode_playlist = ["default", "skyline", "frog_eyes", "rainbow", "openworks", "cats", "adventure_time", "matrix", "custom_text_file_0", "custom_text_file_1"]
+mode_playlist = ["default", "skyline", "frog_eyes", "rainbow", "openworks", "cats", "adventure_time", "matrix",
+                 "custom_text_file_0", "custom_text_file_1"]
 
 current_mode = 0
 

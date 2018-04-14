@@ -36,7 +36,8 @@ def main_state_thread(settings):
 
         #  --------  ADDONS --------
         if settings["rainbow_show"]:
-            hat_display.rainbow(strip, run_counter)
+            speed = settings["rainbow_speed"]
+            hat_display.rainbow(strip, run_counter, speed)
 
         #  --------  MODE TEXT AND CHASE --------
         if mode == sc.MODE_TEXT_AND_CHASE:
