@@ -66,7 +66,7 @@ def start_mode(settings, mode):
     # print(mode_data)
     # print(mode, mode_data, settings)
     settings = merge_two_dicts(settings, mode_data)
-    print(settings)
+    # print(settings)
     return settings
 
 
@@ -76,4 +76,4 @@ def trigger_next_mode(settings):
     current_mode += 1
     if current_mode >= len(mode_playlist):
         current_mode = 0
-    return start_mode(mode_playlist[current_mode])
+    return start_mode(settings, mode_playlist[current_mode])
