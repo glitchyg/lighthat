@@ -15,7 +15,7 @@ default_settings = {
     "text_text_color": (0, 255, 0),
     "text_scroll_speed": -0.5,
     "text_start_offset": 0,
-    "text_mask": True,
+    "text_mask": False,
     "wipe_color": Color(0, 255, 0),
     "wipe_delay": 10,
     "chase_color": Color(0, 255, 0),
@@ -27,7 +27,7 @@ default_settings = {
     "image_show_strip": False,
     "image_show": False,
     "image_mask": False,
-    "rainbow_show": True,
+    "rainbow_show": False,
 }
 
 modes = {
@@ -90,11 +90,19 @@ modes = {
         "image_file": "calibrate.png",
         "text_mask": False,
         "image_mask": True
-    }
+    },
+    "skyline": {
+        "mode": MODE_IMAGE,
+        "image_show": True,
+        "image_file": "skyline.png",
+        "image_show_strip": True,
+        "image_mask": True,
+        "rainbow_show": False,
+    },
 
 }
 
-mode_playlist = ["default", "light_city", "rainbow", "custom_text_file"]
+mode_playlist = ["default", "skyline", "light_city", "rainbow", "custom_text_file"]
 
 current_mode = 0
 
