@@ -84,7 +84,7 @@ modes = {
         "text_text_color": (0, 0, 255),
         "text_scroll_speed": -0.5,
         "text_show_strip": False,
-        "image_show_strip": False,
+        "image_show_strip": True,
         "image_show": True,
         "image_file": "calibrate.png",
         "text_mask": False,
