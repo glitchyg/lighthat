@@ -24,7 +24,7 @@ def interrupted(settings):
 
 def main_state_thread(settings):
     strip = hat_display.init_display_controller()
-    settings = sc.start_mode(settings, "text_and_chase")
+    settings = sc.start_mode(settings, "image_test")
     run_counter = 0
     last_mode_button_state = False
     hat_display.fill(strip, 0)
@@ -60,6 +60,11 @@ def main_state_thread(settings):
             if settings["text_show_strip"]:
                 strip.show()
             # time.sleep(50 / 1000)
+
+        #  --------  MODE IMAGE --------
+
+        if mode == sc.MODE_IMAGE:
+            hat_display.show_image(strip, settings["image_file"], False)
 
         #  --------  MODE WIPE --------
         if mode == sc.MODE_COLOR_WIPE:

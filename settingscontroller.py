@@ -4,6 +4,7 @@ MODE_TEXT = 0
 MODE_COLOR_WIPE = 1
 MODE_CHASE = 2
 MODE_TEXT_AND_CHASE = 3
+MODE_IMAGE = 4
 
 TEXT_MODE_SOLID = 0
 
@@ -62,6 +63,10 @@ modes = {
         "chase_delay": 20,
         "text_show_strip": True,
         "chase_show_strip": False
+    },
+    "image_test": {
+        "mode": MODE_IMAGE,
+        "image_file": "calibrate.png"
     }
 
 }

@@ -80,21 +80,10 @@ def fill(strip, color):
     # strip.show()
 
 
-q = 0
 def theaterChase(strip, run_counter, color, wait_ms=50):
-    global q
-    q += 1
-    if q >= 3:
-        q = 0
-    # for q in range(3):
     q = (run_counter % 3)
     for i in range(0, strip.numPixels(), 3):
         strip.setPixelColor(getCorrectedPixelIndex(i + q), color)
-    # time.sleep(wait_ms / 1000.0)
-    # strip.show()
-    # for i in range(0, strip.numPixels(), 3):
-    #     strip.setPixelColor(getCorrectedPixelIndex(i + q), 0)
-
 
 
 def wheel(pos):
@@ -148,6 +137,11 @@ def show_rgb_image(strip, rgb_img, mask):
             if (not mask) or (mask and not empty):
                 strip.setPixelColor(getCorrectedPixelIndex(i), Color(g, r, b))  #G, R, B
             i += 1
+
+
+def show_image(strip, image_file, mask):
+    rgb_img = tc.get_image(image_file)
+    show_rgb_image(strip, rgb_img, mask)
 
 
 def show_text(strip, text, offset, wrap, text_color, bg_color, mask):

@@ -3,10 +3,12 @@ from PIL import ImageFont
 from PIL import ImageDraw
 
 
+
 def get_image(file):
     img = Image.open(file)
     rgb_img = img.convert('RGB')
     return rgb_img
+
 
 
 def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False, text_color=(255, 0, 0), bg_color=(0, 0, 0)):
