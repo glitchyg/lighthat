@@ -70,8 +70,8 @@
       <file leaf-file-name="textcontroller.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/textcontroller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+            <state relative-caret-position="370">
+              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -554,8 +554,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/textcontroller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        <state relative-caret-position="370">
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
