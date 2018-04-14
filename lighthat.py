@@ -47,6 +47,7 @@ def main_state_thread(settings):
         input_state = GPIO.input(16)
         if input_state == False and last_mode_button_state == True:
             print("Button Pushed")
+            settings = sc.trigger_next_mode(settings)
 
         last_mode_button_state = input_state
 
