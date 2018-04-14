@@ -48,7 +48,7 @@ def merge_two_dicts(x, y):
     # I know this is hacky
 
 
-    x["text_text_color"] = y["text_text_color"]
+    # x["text_text_color"] = y["text_text_color"]
 
     return x
 
