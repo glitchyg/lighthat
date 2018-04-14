@@ -7,6 +7,7 @@ import time
 import displaycontroller as hat_display
 import webinterface as web
 import settingscontroller as sc
+from neopixel import Color
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -39,7 +40,7 @@ def main_state_thread(settings):
         # --------  MODE CHASE --------
         if mode == sc.MODE_CHASE or mode == sc.MODE_TEXT_AND_CHASE:
             print("a")
-            hat_display.theaterChase(strip, run_counter, settings["chase_color"], settings["chase_delay"])
+            hat_display.theaterChase(strip, run_counter, Color(0, 255, 0), settings["chase_delay"])
             if settings["chase_show_strip"]:
                 strip.show()
 
