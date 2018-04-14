@@ -61,7 +61,7 @@ modes = {
         "chase_color": Color(255, 0, 0),  # G, R, B
         "chase_delay": 20,
         "text_show_strip": True,
-        "chase_show_strip": False
+        "chase_show_strip": True
     }
 
 }
