@@ -10,6 +10,7 @@ def get_image(file):
 
 
 def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False, text_color=(255, 0, 0), bg_color=(0, 0, 0)):
+    print(text_color)
     TOP_OFFSET = 1
 
     img = Image.new('RGB', (width, height), bg_color)
