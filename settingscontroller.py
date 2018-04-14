@@ -45,7 +45,7 @@ current_mode = 0
 
 
 def merge_two_dicts(x, y):
-    x["text_text_color"] = y["text_text_color"]
+    x["text_text_color"] = PColor(90,0,255)
 
     # print(type(x["text_text_color"]))
     # z = x.copy()  # start with x's keys and values
