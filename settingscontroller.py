@@ -78,7 +78,7 @@ modes = {
         "image_file": "rainbow.png",
         "image_show_strip": True
     },
-    "custom_text_file": {
+    "custom_text_file_0": {
         "mode": MODE_TEXT,
         "text": "EMPTY",
         "text_bg_color": (0, 0, 0),
@@ -90,6 +90,16 @@ modes = {
         "image_file": "calibrate.png",
         "text_mask": False,
         "image_mask": True
+    },
+    "custom_text_file_1": {
+        "mode": MODE_TEXT,
+        "text": "EMPTY",
+        "text_bg_color": (0, 0, 0),
+        "text_text_color": (255, 246, 0),
+        "text_scroll_speed": -0.5,
+        "text_show_strip": False,
+        "rainbow_show": True,
+        "text_mask": True,
     },
     "skyline": {
         "mode": MODE_IMAGE,
@@ -105,16 +115,25 @@ modes = {
         "image_file": "openworks.png",
         "image_show_strip": True,
     },
+    "matrix": {
+        "mode": MODE_IMAGE,
+        "image_show": True,
+        "image_file": "matrix.png",
+        "image_show_strip": True,
+    },
 }
 
-mode_playlist = ["default", "skyline", "light_city", "rainbow", "openworks", "custom_text_file"]
+mode_playlist = ["default", "skyline", "light_city", "rainbow", "openworks", "matrix", "custom_text_file_0", "custom_text_file_1"]
 
 current_mode = 0
 
 
 def is_custom_text_mode():
     global mode_playlist, current_mode
-    return mode_playlist[current_mode] == "custom_text_file"
+    if mode_playlist[current_mode] == "custom_text_file_0":
+        return True
+    if mode_playlist[current_mode] == "custom_text_file_1":
+        return True
 
 
 def reset_settings(settings):
