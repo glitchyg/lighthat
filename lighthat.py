@@ -7,19 +7,42 @@ import displaycontroller as hat_display
 import webinterface as web
 from neopixel import Color
 
+MODE_TEXT = 0
+
+TEXT_MODE_SOLID = 0
+
 settings = {
-    "text": "hello world"
+    "text": "hello world",
+    "text_bg_mode": TEXT_MODE_SOLID,
+    "text_scroll_speed": -1,
+    "mode": MODE_TEXT,
+    "interrupt": False
 }
+
+
+# Used to tell if we should early out of whatever we are doing
+# This is used for when we are in a mode we want out of
+def interrupted(settings):
+    if settings["interrupt"]:
+        settings["interrupt"] = False
+        return True
+    return False
 
 
 def main_state_thread(settings):
     strip = hat_display.init_display_controller()
 
+    run_counter = 0
+
     while True:
-        # hatDisplay.colorWipe(strip, Color(0, 0, 0), 0)
-        for x in range(0, -1000, -1):
-            hat_display.show_text(strip, settings["text"], x, True)
+        mode = (settings["mode"])
+        if mode == MODE_TEXT:
+            scroll_pos = settings["text_scroll_speed"] * run_counter
+            hat_display.show_text(strip, settings["text"], scroll_pos, True)
             time.sleep(0.01)
+            
+
+        run_counter += 1
 
 
 # Main program logic follows:

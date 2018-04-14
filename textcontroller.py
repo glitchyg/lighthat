@@ -9,10 +9,10 @@ def get_image(file):
     return rgb_img
 
 
-def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False):
+def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False, text_color=(100, 100, 100), bg_color=(0, 0, 0)):
     TOP_OFFSET = 1
 
-    img = Image.new('RGB', (width, height), (0, 0, 0))
+    img = Image.new('RGB', (width, height), bg_color)
 
     fnt = ImageFont.truetype('munro.ttf', 7)
 
@@ -29,7 +29,7 @@ def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False):
     if offset <= -width:
         offset = (offset % width)
 
-    d.text((offset, TOP_OFFSET), text, font=fnt, fill=(0, 255, 0))
+    d.text((offset, TOP_OFFSET), text, font=fnt, fill=text_color)
 
     if wrap:
         # Check if we even need to wrap forward.
