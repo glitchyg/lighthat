@@ -71,10 +71,10 @@ modes = {
         "chase_show_strip": False,
         "text_mask": True,
     },
-    "image_test": {
+    "rainbow": {
         "mode": MODE_IMAGE,
         "image_show": True,
-        "image_file": "calibrate.png",
+        "image_file": "rainbow.png",
         "image_show_strip": True
     },
     "custom_text_file": {
@@ -93,7 +93,7 @@ modes = {
 
 }
 
-mode_playlist = ["default", "light_city", "penis", "wipe", "custom_text_file"]
+mode_playlist = ["default", "light_city", "rainbow", "custom_text_file"]
 
 current_mode = 0
 
