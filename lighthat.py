@@ -40,6 +40,7 @@ def main_state_thread(settings):
         mode = (settings["mode"])
         if mode == MODE_TEXT:
             scroll_pos = settings["text_scroll_speed"] * run_counter
+            print("A:", settings["text_text_color"])
             hat_display.show_text(strip, settings["text"], scroll_pos, True, settings["text_text_color"], settings["text_bg_color"])
             print (scroll_pos)
             time.sleep(0.10)
