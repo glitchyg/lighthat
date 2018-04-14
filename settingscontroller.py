@@ -35,7 +35,7 @@ modes = {
         "text": "PENIS",
         "text_bg_color": (0, 0, 0),
         "text_text_color": (255, 255, 255),
-        "text_start_offset": 20,
+        "text_start_offset": 23,
         "text_scroll_speed": 0
     },
     "wipe": {
