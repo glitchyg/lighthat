@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30e0bfbb-bf2a-44d6-8001-69097c8a0d6a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/displaycontroller.py" afterPath="$PROJECT_DIR$/displaycontroller.py" />
-      <change beforePath="$PROJECT_DIR$/lighthat.py" afterPath="$PROJECT_DIR$/lighthat.py" />
+      <change beforePath="$PROJECT_DIR$/settingscontroller.py" afterPath="$PROJECT_DIR$/settingscontroller.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +13,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="675">
-      <file leaf-file-name="lighthat.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lighthat.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lighthat.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="740">
@@ -36,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settingscontroller.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settingscontroller.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/settingscontroller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-740">
-              <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="16" />
+            <state relative-caret-position="851">
+              <caret line="62" column="32" lean-forward="true" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -151,9 +150,9 @@
         <option value="$PROJECT_DIR$/neopixel.py" />
         <option value="$PROJECT_DIR$/textcontroller.py" />
         <option value="$PROJECT_DIR$/TestButton.py" />
-        <option value="$PROJECT_DIR$/settingscontroller.py" />
         <option value="$PROJECT_DIR$/displaycontroller.py" />
         <option value="$PROJECT_DIR$/lighthat.py" />
+        <option value="$PROJECT_DIR$/settingscontroller.py" />
       </list>
     </option>
   </component>
@@ -583,14 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settingscontroller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-740">
-          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/displaycontroller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1998">
@@ -617,6 +608,14 @@
           <folding>
             <element signature="e#24#47#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settingscontroller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="62" column="32" lean-forward="true" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
