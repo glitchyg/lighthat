@@ -73,6 +73,19 @@ modes = {
         "chase_show_strip": False,
         "text_mask": True,
     },
+    "light_city_2": {
+        "mode": MODE_TEXT_AND_CHASE,
+        "text": "LIGHT CITY",
+        "text_bg_color": (0, 0, 0),
+        "text_text_color": (255, 255, 255),
+        "text_start_offset": 23,
+        "text_scroll_speed": -1,
+        "chase_color": Color(0, 255, 0),  # G, R, B
+        "chase_delay": 20,
+        "text_show_strip": True,
+        "chase_show_strip": False,
+        "text_mask": True,
+    },
     "rainbow": {
         "mode": MODE_IMAGE,
         "image_show": True,
@@ -157,9 +170,8 @@ modes = {
     },
 }
 
-mode_playlist = ["default", "skyline", "sonic", "frog_eyes", "rainbow", "openworks", "cats", "adventure_time", "mario",
-                 "matrix",
-                 "custom_text_file_0", "custom_text_file_1"]
+mode_playlist = ["default", "light_city_2", "skyline", "adventure_time", "sonic", "frog_eyes", "rainbow", "openworks",
+                 "cats", "mario", "matrix", "custom_text_file_0", "custom_text_file_1"]
 
 current_mode = 0
 
