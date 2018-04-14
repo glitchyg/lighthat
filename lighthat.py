@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 
+import RPi.GPIO as GPIO
 import argparse
 import thread
 import time
 import displaycontroller as hat_display
 import webinterface as web
 import settingscontroller as sc
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 
 # Used to tell if we should early out of whatever we are doing
@@ -19,12 +23,9 @@ def interrupted(settings):
 
 def main_state_thread(settings):
     strip = hat_display.init_display_controller()
-
     settings = sc.start_mode(settings, "wipe")
-
-    print(settings)
-
     run_counter = 0
+    last_mode_button_state = False
 
     while True:
         mode = (settings["mode"])
@@ -41,6 +42,13 @@ def main_state_thread(settings):
                 settings = sc.trigger_next_mode(settings)
 
         run_counter += 1
+
+        # Check for mode change
+        input_state = GPIO.input(16)
+        if input_state == True and last_mode_button_state == False:
+            print("Button Pushed")
+
+        last_mode_button_state = input_state
 
 
 # Main program logic follows:
