@@ -27,7 +27,7 @@ default_settings = {
     "image_show_strip": False,
     "image_show": False,
     "image_mask": False,
-    "rainbow_show": False,
+    "rainbow_show": True,
 }
 
 modes = {
