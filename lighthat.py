@@ -23,7 +23,7 @@ def interrupted(settings):
 
 def main_state_thread(settings):
     strip = hat_display.init_display_controller()
-    settings = sc.start_mode(settings, "penis")
+    settings = sc.start_mode(settings, "text_and_chase")
     run_counter = 0
     last_mode_button_state = False
 
@@ -50,7 +50,7 @@ def main_state_thread(settings):
         #  --------  MODE CHASE --------
         if mode == sc.MODE_CHASE or mode == sc.MODE_TEXT_AND_CHASE:
             fill_empty = (mode == sc.MODE_TEXT_AND_CHASE)
-            hat_display.theaterChase(strip, run_counter, settings["chase_color"], settings["chase_delay"])
+            hat_display.theaterChase(strip, run_counter, settings["chase_color"], settings["chase_delay"], fill_empty)
 
         run_counter += 1
 
