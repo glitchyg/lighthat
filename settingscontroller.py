@@ -42,7 +42,7 @@ modes = {
     },
     "chase": {
         "mode": MODE_CHASE,
-        "chase_color": PColor(0, 255, 0),
+        "chase_color": Color(255, 0, 0),  # G, R, B
         "chase_delay": 20,
     }
 }
