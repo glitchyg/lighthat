@@ -45,6 +45,7 @@ def main_state_thread(settings):
                 scroll_pos = settings["text_start_offset"]
             hat_display.show_text(strip, settings["text"], scroll_pos, True, int(settings["text_text_color"]),
                                   settings["text_bg_color"], False)
+            strip.show()
             time.sleep(50 / 1000)
 
         #  --------  MODE WIPE --------
