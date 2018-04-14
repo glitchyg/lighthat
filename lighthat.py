@@ -48,8 +48,8 @@ def main_state_thread(settings):
             if scroll_pos == 0:
                 scroll_pos = settings["text_start_offset"]
             mask = (mode == sc.MODE_TEXT_AND_CHASE)
-            hat_display.show_text(strip, settings["text"], scroll_pos, True, int(settings["text_text_color"]),
-                                  settings["text_bg_color"], True)
+            # hat_display.show_text(strip, settings["text"], scroll_pos, True, int(settings["text_text_color"]),
+            #                       settings["text_bg_color"], True)
             if settings["text_show_strip"]:
                 strip.show()
             time.sleep(50 / 1000)
