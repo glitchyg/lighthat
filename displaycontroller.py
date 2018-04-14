@@ -64,7 +64,7 @@ def colorWipe(strip, run_counter, color, wait_ms=50):
     total_pixels = strip.numPixels()
     i = run_counter % total_pixels
     # for i in range(strip.numPixels()):
-    strip.setPixelColor(getCorrectedPixelIndex(i), color)
+    strip.setPixelColor(getCorrectedPixelIndex(i), Color(color[0], color[1], color[2]))
     strip.show()
     time.sleep(wait_ms / 1000.0)
     if i == (total_pixels - 1):
