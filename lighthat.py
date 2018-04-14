@@ -77,6 +77,9 @@ def main_state_thread(settings):
             if settings["image_show_strip"]:
                 strip.show()
 
+        hat_display.rainbow(strip, run_counter)
+        strip.show()
+
         # Take all the time we wanted to delay and do it at the end
         time.sleep(total_delay / 1000.0)
 
