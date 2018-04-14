@@ -19,6 +19,7 @@ settings = {
     "text_text_color": (255, 0, 0),
     "text_scroll_speed": -0.5,
     "wipe_color": Color(0, 255, 0),
+    "wipe_delay": 10,
     "mode": MODE_COLOR_WIPE,
     "interrupt": False
 }
@@ -45,7 +46,7 @@ def main_state_thread(settings):
             hat_display.show_text(strip, settings["text"], scroll_pos, True, settings["text_text_color"], settings["text_bg_color"])
             time.sleep(50 / 1000)
         elif mode == MODE_COLOR_WIPE:
-            finished = hat_display.colorWipe(strip, run_counter, settings["wipe_color"])
+            finished = hat_display.colorWipe(strip, run_counter, settings["wipe_color"], settings["wipe_delay"])
             if finished:
                 print("FUCK YEA")
 
