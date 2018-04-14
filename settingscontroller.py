@@ -45,9 +45,12 @@ current_mode = 0
 
 
 def merge_two_dicts(x, y):
-    z = x.copy()  # start with x's keys and values
-    z.update(y)  # modifies z with y's keys and values & returns None
-    return z
+    # I know this is hacky
+
+
+    x["text_text_color"] = y["text_text_color"]
+
+    return x
 
 
 def start_mode(settings, mode):
