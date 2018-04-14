@@ -5,7 +5,7 @@ MODE_COLOR_WIPE = 1
 
 TEXT_MODE_SOLID = 0
 
-settings = {
+default_settings = {
     "text": "hello world",
     "text_bg_mode": TEXT_MODE_SOLID,
     "text_bg_color": (0, 0, 0),
@@ -45,18 +45,18 @@ def merge_two_dicts(x, y):
     return z
 
 
-def start_mode(mode):
-    global modes, settings
+def start_mode(settings, mode):
+    global modes
     mode_data = modes[mode]
     print(mode, mode_data, settings)
     settings = merge_two_dicts(settings, mode_data)
-    print(settings)
+    return settings
 
 
-def trigger_next_mode():
+def trigger_next_mode(settings):
     print("Next Mode")
     global current_mode, mode_playlist
     current_mode += 1
     if current_mode >= len(mode_playlist):
         current_mode = 0
-    start_mode(mode_playlist[current_mode])
+    return start_mode(mode_playlist[current_mode])

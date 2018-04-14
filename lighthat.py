@@ -17,9 +17,10 @@ def interrupted(settings):
     return False
 
 
-def main_state_thread(penis):
+def main_state_thread(settings):
     strip = hat_display.init_display_controller()
-    start_mode("default")
+
+    settings = start_mode("default")
 
     run_counter = 0
 
@@ -32,7 +33,7 @@ def main_state_thread(penis):
         elif mode == MODE_COLOR_WIPE:
             finished = hat_display.colorWipe(strip, run_counter, settings["wipe_color"], settings["wipe_delay"])
             if finished:
-                trigger_next_mode()
+                settings = trigger_next_mode(settings)
 
 
         run_counter += 1
@@ -41,7 +42,7 @@ def main_state_thread(penis):
 # Main program logic follows:
 if __name__ == '__main__':
     try:
-        thread.start_new_thread(main_state_thread, (settings,))
+        thread.start_new_thread(main_state_thread, (default_settings,))
         # thread.start_new_thread(web.web_interface_thread, (settings,))
     except:
         print "Error: unable to start thread"
