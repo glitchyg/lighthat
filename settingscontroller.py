@@ -48,8 +48,9 @@ def merge_two_dicts(x, y):
 def start_mode(settings, mode):
     global modes
     mode_data = modes[mode]
+    print(mode_data)
     # print(mode, mode_data, settings)
-    settings = merge_two_dicts(settings, mode_data)
+    # settings = merge_two_dicts(settings, mode_data)
     return settings
 
 

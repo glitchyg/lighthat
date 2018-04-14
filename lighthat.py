@@ -20,7 +20,7 @@ def interrupted(settings):
 def main_state_thread(settings):
     strip = hat_display.init_display_controller()
 
-    # settings = sc.start_mode(settings, "default")
+    settings = sc.start_mode(settings, "default")
 
     print(settings)
 
