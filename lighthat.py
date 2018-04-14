@@ -23,20 +23,20 @@ def interrupted(settings):
 
 def main_state_thread(settings):
     strip = hat_display.init_display_controller()
-    settings = sc.start_mode(settings, "chase")
+    settings = sc.start_mode(settings, "penis")
     run_counter = 0
     last_mode_button_state = False
 
     while True:
         mode = (settings["mode"])
         if mode == sc.MODE_TEXT:
-            # print("a")
             scroll_pos = settings["text_scroll_speed"] * run_counter
+            if scroll_pos == 0:
+                scroll_pos = settings["text_start_offset"]
             hat_display.show_text(strip, settings["text"], scroll_pos, True, int(settings["text_text_color"]),
                                   settings["text_bg_color"])
             time.sleep(50 / 1000)
         elif mode == sc.MODE_COLOR_WIPE:
-            # print("b")
             finished = hat_display.colorWipe(strip, run_counter, settings["wipe_color"], settings["wipe_delay"])
             if finished:
                 run_counter = 0

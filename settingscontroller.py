@@ -3,6 +3,7 @@ from neopixel import Color, PColor
 MODE_TEXT = 0
 MODE_COLOR_WIPE = 1
 MODE_CHASE = 2
+MODE_TEXT_AND_CHASE = 3
 
 TEXT_MODE_SOLID = 0
 
@@ -12,6 +13,7 @@ default_settings = {
     "text_bg_color": (0, 0, 0),
     "text_text_color": (0, 255, 0),
     "text_scroll_speed": -0.5,
+    "text_start_offset": 0,
     "wipe_color": Color(0, 255, 0),
     "wipe_delay": 10,
     "chase_color": Color(0, 255, 0),
@@ -33,7 +35,8 @@ modes = {
         "text": "PENIS",
         "text_bg_color": (0, 0, 0),
         "text_text_color": (255, 255, 255),
-        "text_scroll_speed": -0.2
+        "text_start_offset": 20,
+        "text_scroll_speed": 0
     },
     "wipe": {
         "mode": MODE_COLOR_WIPE,
@@ -44,7 +47,11 @@ modes = {
         "mode": MODE_CHASE,
         "chase_color": Color(255, 0, 0),  # G, R, B
         "chase_delay": 20,
+    },
+    "text_and_chase": {
+        "mode": MODE_TEXT_AND_CHASE
     }
+
 }
 
 mode_playlist = ["default", "penis", "wipe"]
