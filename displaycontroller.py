@@ -131,24 +131,25 @@ def theaterChaseRainbow(strip, wait_ms=50):
                 strip.setPixelColor(getCorrectedPixelIndex(i + q), 0)
 
 
-def show_rgb_image(strip, rgb_img, mask=False):
+def show_rgb_image(strip, rgb_img, mask):
     i = 0
     for y in range(HAT_HEIGHT):
         for x in range(HAT_WIDTH):
             r, g, b = rgb_img.getpixel((x, y))
+            print((r + g + b))
             if not mask or ((r + g + b) > 0):
                 strip.setPixelColor(getCorrectedPixelIndex(i), Color(g, r, b))  #G, R, B
             i += 1
 
 
-def show_text(strip, text, offset, wrap, text_color, bg_color, mask=False):
+def show_text(strip, text, offset, wrap, text_color, bg_color, mask):
     rgb_img = tc.get_text_image(text, HAT_WIDTH, HAT_HEIGHT, offset, wrap, False, text_color, bg_color)
     show_rgb_image(strip, rgb_img, mask)
 
 
 def show_simple_text(strip, text):
     rgb_img = tc.get_text_image(text, HAT_WIDTH, HAT_HEIGHT)
-    show_rgb_image(strip, rgb_img)
+    show_rgb_image(strip, rgb_img, False)
 
 
 def init_display_controller():
