@@ -9,7 +9,7 @@ def get_image(file):
     return rgb_img
 
 
-def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False, text_color=(100, 100, 100), bg_color=(0, 0, 0)):
+def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False, text_color=(255, 0, 0), bg_color=(0, 0, 0)):
     TOP_OFFSET = 1
 
     img = Image.new('RGB', (width, height), bg_color)
@@ -35,12 +35,12 @@ def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False, t
         # Check if we even need to wrap forward.
         if offset + size[0] > width:
             wrap_offset = 0 - (width - offset)
-            d.text((wrap_offset, TOP_OFFSET), text, font=fnt, fill=(0, 255, 0))
+            d.text((wrap_offset, TOP_OFFSET), text, font=fnt, fill=text_color)
 
         if offset < 0:
             wrap_offset = (width - abs(offset))
             # print(size[0], width, offset, wrap_offset)
-            d.text((wrap_offset, TOP_OFFSET), text, font=fnt, fill=(0, 255, 0))
+            d.text((wrap_offset, TOP_OFFSET), text, font=fnt, fill=text_color)
 
     if saveImage:
         img.save('temp1.png')
