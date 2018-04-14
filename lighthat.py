@@ -29,6 +29,7 @@ def main_state_thread(settings):
     last_mode_button_state = False
     hat_display.fill(strip, 0)
     strip.show()
+    total_delay = 0;
 
     while True:
         mode = (settings["mode"])
@@ -43,6 +44,7 @@ def main_state_thread(settings):
             hat_display.theaterChase(strip, run_counter, Color(0, 255, 0), 50)
             if settings["chase_show_strip"]:
                 strip.show()
+            total_delay += settings["chase_delay"]
 
         #  --------  MODE TEXT --------
         if mode == sc.MODE_TEXT or mode == sc.MODE_TEXT_AND_CHASE:
@@ -54,7 +56,7 @@ def main_state_thread(settings):
                                   settings["text_bg_color"], True)
             if settings["text_show_strip"]:
                 strip.show()
-            time.sleep(50 / 1000)
+            # time.sleep(50 / 1000)
 
         #  --------  MODE WIPE --------
         if mode == sc.MODE_COLOR_WIPE:
@@ -65,7 +67,8 @@ def main_state_thread(settings):
                 strip.show()
                 settings = sc.trigger_next_mode(settings)
 
-
+        # Take all the time we wanted to delay and do it at the end
+        time.sleep(total_delay / 1000.0)
 
         run_counter += 1
 
