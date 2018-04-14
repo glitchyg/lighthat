@@ -35,12 +35,6 @@ def main_state_thread(settings):
         mode = (settings["mode"])
         total_delay = 0
 
-        #  --------  MODE IMAGE --------
-        if mode == sc.MODE_IMAGE or settings["image_show"]:
-            hat_display.show_image(strip, settings["image_file"], False)
-            if settings["image_show_strip"]:
-                strip.show()
-
         #  --------  MODE TEXT AND CHASE --------
         if mode == sc.MODE_TEXT_AND_CHASE:
             hat_display.fill(strip, 0)
@@ -67,7 +61,6 @@ def main_state_thread(settings):
                 strip.show()
             # time.sleep(50 / 1000)
 
-
         #  --------  MODE WIPE --------
         if mode == sc.MODE_COLOR_WIPE:
             finished = hat_display.colorWipe(strip, run_counter, settings["wipe_color"], settings["wipe_delay"])
@@ -76,6 +69,13 @@ def main_state_thread(settings):
                 hat_display.fill(strip, 0)
                 strip.show()
                 settings = sc.trigger_next_mode(settings)
+
+        #  --------  MODE IMAGE --------
+        if mode == sc.MODE_IMAGE or settings["image_show"]:
+            mask = settings["image_mask"]
+            hat_display.show_image(strip, settings["image_file"], mask)
+            if settings["image_show_strip"]:
+                strip.show()
 
         # Take all the time we wanted to delay and do it at the end
         time.sleep(total_delay / 1000.0)

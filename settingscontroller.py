@@ -25,7 +25,8 @@ default_settings = {
     "text_show_strip": False,
     "chase_show_strip": False,
     "image_show_strip": False,
-    "image_show": False
+    "image_show": False,
+    "image_mask": False
 }
 
 modes = {
