@@ -30,13 +30,21 @@ def main_state_thread(settings):
     while True:
         mode = (settings["mode"])
 
+        #  --------  MODE TEXT AND CHASE --------
+        if mode == sc.MODE_TEXT_AND_CHASE:
+            hat_display.fill(strip, 0)
+
+        #  --------  MODE CHASE --------
+        if mode == sc.MODE_CHASE or mode == sc.MODE_TEXT_AND_CHASE:
+            hat_display.theaterChase(strip, run_counter, settings["chase_color"], settings["chase_delay"])
+
         #  --------  MODE TEXT --------
         if mode == sc.MODE_TEXT or mode == sc.MODE_TEXT_AND_CHASE:
             scroll_pos = settings["text_scroll_speed"] * run_counter
             if scroll_pos == 0:
                 scroll_pos = settings["text_start_offset"]
             hat_display.show_text(strip, settings["text"], scroll_pos, True, int(settings["text_text_color"]),
-                                  settings["text_bg_color"])
+                                  settings["text_bg_color"], True)
             time.sleep(50 / 1000)
 
         #  --------  MODE WIPE --------
@@ -45,12 +53,10 @@ def main_state_thread(settings):
             if finished:
                 run_counter = 0
                 hat_display.fill(strip, 0)
+                strip.show()
                 settings = sc.trigger_next_mode(settings)
 
-        #  --------  MODE CHASE --------
-        if mode == sc.MODE_CHASE or mode == sc.MODE_TEXT_AND_CHASE:
-            fill_empty = (mode == sc.MODE_TEXT_AND_CHASE)
-            hat_display.theaterChase(strip, run_counter, settings["chase_color"], settings["chase_delay"])
+
 
         run_counter += 1
 

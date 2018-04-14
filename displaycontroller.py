@@ -77,18 +77,17 @@ def fill(strip, color):
     """Wipe color across display a pixel at a time."""
     for i in range(strip.numPixels()):
         strip.setPixelColor(i, color)
-    strip.show()
+    # strip.show()
 
 
-def theaterChase(strip, run_counter, color, wait_ms=50, fill_empty=False):
+def theaterChase(strip, run_counter, color, wait_ms=50):
     for q in range(3):
         for i in range(0, strip.numPixels(), 3):
-            if strip.getPixels()[i] > 0:
-                strip.setPixelColor(getCorrectedPixelIndex(i + q), color)
+            strip.setPixelColor(getCorrectedPixelIndex(i + q), color)
         strip.show()
         time.sleep(wait_ms / 1000.0)
-        # for i in range(0, strip.numPixels(), 3):
-        #     strip.setPixelColor(getCorrectedPixelIndex(i + q), 0)
+        for i in range(0, strip.numPixels(), 3):
+            strip.setPixelColor(getCorrectedPixelIndex(i + q), 0)
 
 
 def wheel(pos):
@@ -133,19 +132,19 @@ def theaterChaseRainbow(strip, wait_ms=50):
                 strip.setPixelColor(getCorrectedPixelIndex(i + q), 0)
 
 
-def show_rgb_image(strip, rgb_img):
+def show_rgb_image(strip, rgb_img, mask=False):
     i = 0
     for y in range(HAT_HEIGHT):
         for x in range(HAT_WIDTH):
             r, g, b = rgb_img.getpixel((x, y))
-            strip.setPixelColor(getCorrectedPixelIndex(i), Color(g, r, b))  #G, R, B
+            if mask and not r == 0 and not g == 0 and not b == 0:
+                strip.setPixelColor(getCorrectedPixelIndex(i), Color(g, r, b))  #G, R, B
             i += 1
-    strip.show()
 
 
-def show_text(strip, text, offset, wrap, text_color, bg_color):
+def show_text(strip, text, offset, wrap, text_color, bg_color, mask=False):
     rgb_img = tc.get_text_image(text, HAT_WIDTH, HAT_HEIGHT, offset, wrap, False, text_color, bg_color)
-    show_rgb_image(strip, rgb_img)
+    show_rgb_image(strip, rgb_img, mask)
 
 
 def show_simple_text(strip, text):
