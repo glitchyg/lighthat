@@ -8,8 +8,8 @@ TEXT_MODE_SOLID = 0
 default_settings = {
     "text": "hello world",
     "text_bg_mode": TEXT_MODE_SOLID,
-    "text_bg_color": PColor(0, 0, 0),
-    "text_text_color": PColor(0, 255, 0),
+    "text_bg_color": (0, 0, 0),
+    "text_text_color": (0, 255, 0),
     "text_scroll_speed": -0.5,
     "wipe_color": Color(0, 255, 0),
     "wipe_delay": 10,
@@ -45,13 +45,15 @@ current_mode = 0
 
 
 def merge_two_dicts(current, new):
-    # print(type(x["text_text_color"]))
     updated = current.copy()  # start with x's keys and values
     updated.update(new)  # modifies z with y's keys and values & returns None
 
-    tc = new["text_text_color"]
-    updated["text_text_color"] = PColor(tc[0], tc[1], tc[2])
-    # print(type(z["text_text_color"]))
+    # Uhhg, some kind of bug. Have to do this shit to get around it
+    ttc = new["text_text_color"]
+    updated["text_text_color"] = PColor(ttc[0], ttc[1], ttc[2])
+
+    tbc = new["text_bg_color"]
+    updated["text_bg_color"] = PColor(tbc[0], tbc[1], tbc[2])
 
     return updated
 
