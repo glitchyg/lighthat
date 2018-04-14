@@ -9,7 +9,7 @@ default_settings = {
     "text": "hello world",
     "text_bg_mode": TEXT_MODE_SOLID,
     "text_bg_color": (0, 0, 0),
-    "text_text_color": (255, 0, 0),
+    "text_text_color": Color(255, 0, 0),
     "text_scroll_speed": -0.5,
     "wipe_color": Color(0, 255, 0),
     "wipe_delay": 10,
@@ -45,11 +45,9 @@ current_mode = 0
 
 
 def merge_two_dicts(x, y):
-    # I know this is hacky
-
-    x["text_text_color"] = Color(0, 255, 255)
-
-    return x
+    z = x.copy()  # start with x's keys and values
+    z.update(y)  # modifies z with y's keys and values & returns None
+    return z
 
 
 def start_mode(settings, mode):
@@ -57,7 +55,7 @@ def start_mode(settings, mode):
     mode_data = modes[mode]
     # print(mode_data)
     # print(mode, mode_data, settings)
-    settings = merge_two_dicts(settings, mode_data)
+    # settings = merge_two_dicts(settings, mode_data)
     # print(settings)
     return settings
 
