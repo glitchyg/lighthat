@@ -8,7 +8,7 @@ TEXT_MODE_SOLID = 0
 default_settings = {
     "text": "hello world",
     "text_bg_mode": TEXT_MODE_SOLID,
-    "text_bg_color": (0, 0, 0),
+    "text_bg_color": PColor(0, 0, 0),
     "text_text_color": PColor(0, 255, 0),
     "text_scroll_speed": -0.5,
     "wipe_color": Color(0, 255, 0),
@@ -21,7 +21,7 @@ modes = {
     "default2": {
         "text": "Works",
         "text_scroll_speed": -1,
-        # "text_text_color": (0, 40, 25)
+        "text_text_color": PColor(0, 40, 25)
     },
     "default": {
         "text": "Hello World",
