@@ -18,7 +18,7 @@ settings = {
     "text_bg_color": (0, 0, 0),
     "text_text_color": (255, 0, 0),
     "text_scroll_speed": -0.5,
-    "wipe_color": (0, 255, 0),
+    "wipe_color": Color(0, 255, 0),
     "mode": MODE_COLOR_WIPE,
     "interrupt": False
 }
