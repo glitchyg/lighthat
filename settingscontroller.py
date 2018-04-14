@@ -49,7 +49,14 @@ modes = {
         "chase_delay": 20,
     },
     "text_and_chase": {
-        "mode": MODE_TEXT_AND_CHASE
+        "mode": MODE_TEXT_AND_CHASE,
+        "text": "PENIS",
+        "text_bg_color": (0, 0, 0),
+        "text_text_color": (255, 255, 255),
+        "text_start_offset": 23,
+        "text_scroll_speed": 0,
+        "chase_color": Color(255, 0, 0),  # G, R, B
+        "chase_delay": 20,
     }
 
 }

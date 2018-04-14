@@ -80,14 +80,15 @@ def fill(strip, color):
     strip.show()
 
 
-def theaterChase(strip, run_counter, color, wait_ms=50):
+def theaterChase(strip, run_counter, color, wait_ms=50, fill_empty=False):
     for q in range(3):
         for i in range(0, strip.numPixels(), 3):
-            strip.setPixelColor(getCorrectedPixelIndex(i + q), color)
+            if strip.getPixels()[i] > 0:
+                strip.setPixelColor(getCorrectedPixelIndex(i + q), color)
         strip.show()
         time.sleep(wait_ms / 1000.0)
-        for i in range(0, strip.numPixels(), 3):
-            strip.setPixelColor(getCorrectedPixelIndex(i + q), 0)
+        # for i in range(0, strip.numPixels(), 3):
+        #     strip.setPixelColor(getCorrectedPixelIndex(i + q), 0)
 
 
 def wheel(pos):
