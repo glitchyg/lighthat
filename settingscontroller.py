@@ -86,7 +86,8 @@ modes = {
         "text_show_strip": True,
         "image_show": True,
         "image_file": "calibrate.png",
-        "text_mask": True,
+        "text_mask": False,
+        "image_mask": True
     }
 
 }
