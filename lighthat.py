@@ -9,7 +9,7 @@ import webinterface as web
 import settingscontroller as sc
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
 # Used to tell if we should early out of whatever we are doing
@@ -45,7 +45,7 @@ def main_state_thread(settings):
 
         # Check for mode change
         input_state = GPIO.input(16)
-        if input_state and not last_mode_button_state:
+        if input_state == False and last_mode_button_state == True:
             print("Button Pushed")
 
         last_mode_button_state = input_state
