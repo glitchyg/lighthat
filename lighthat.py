@@ -33,6 +33,7 @@ def main_state_thread(settings):
 
     while True:
         mode = (settings["mode"])
+        total_delay = 0
 
         #  --------  MODE TEXT AND CHASE --------
         if mode == sc.MODE_TEXT_AND_CHASE:
