@@ -124,7 +124,7 @@ modes = {
     "frog_eyes": {
         "mode": MODE_IMAGE,
         "image_show": True,
-        "image_file": "matrix.png",
+        "image_file": "frogeyes.png",
         "image_show_strip": True,
     },
 }
