@@ -50,7 +50,7 @@ def main_state_thread(settings):
         #  --------  MODE CHASE --------
         if mode == sc.MODE_CHASE or mode == sc.MODE_TEXT_AND_CHASE:
             fill_empty = (mode == sc.MODE_TEXT_AND_CHASE)
-            hat_display.theaterChase(strip, run_counter, settings["chase_color"], settings["chase_delay"], fill_empty)
+            hat_display.theaterChase(strip, run_counter, settings["chase_color"], settings["chase_delay"])
 
         run_counter += 1
 
