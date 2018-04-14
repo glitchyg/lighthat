@@ -76,4 +76,5 @@ def trigger_next_mode(settings):
     current_mode += 1
     if current_mode >= len(mode_playlist):
         current_mode = 0
+    print("Loaded Mode: " + mode_playlist[current_mode])
     return start_mode(settings, mode_playlist[current_mode])
