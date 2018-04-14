@@ -5,24 +5,7 @@ import thread
 import time
 import displaycontroller as hat_display
 import webinterface as web
-from neopixel import Color
-
-MODE_TEXT = 0
-MODE_COLOR_WIPE = 1
-
-TEXT_MODE_SOLID = 0
-
-settings = {
-    "text": "hello world",
-    "text_bg_mode": TEXT_MODE_SOLID,
-    "text_bg_color": (0, 0, 0),
-    "text_text_color": (255, 0, 0),
-    "text_scroll_speed": -0.5,
-    "wipe_color": Color(0, 255, 0),
-    "wipe_delay": 10,
-    "mode": MODE_COLOR_WIPE,
-    "interrupt": False
-}
+from settingscontroller import *
 
 
 # Used to tell if we should early out of whatever we are doing
@@ -36,6 +19,7 @@ def interrupted(settings):
 
 def main_state_thread(settings):
     strip = hat_display.init_display_controller()
+    start_mode("default")
 
     run_counter = 0
 
@@ -48,7 +32,7 @@ def main_state_thread(settings):
         elif mode == MODE_COLOR_WIPE:
             finished = hat_display.colorWipe(strip, run_counter, settings["wipe_color"], settings["wipe_delay"])
             if finished:
-                print("FUCK YEA")
+                trigger_next_mode()
 
 
         run_counter += 1
