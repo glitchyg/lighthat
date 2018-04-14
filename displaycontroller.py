@@ -137,7 +137,7 @@ def show_rgb_image(strip, rgb_img, mask=False):
     for y in range(HAT_HEIGHT):
         for x in range(HAT_WIDTH):
             r, g, b = rgb_img.getpixel((x, y))
-            if mask and not r == 0 and not g == 0 and not b == 0:
+            if not mask or ((r + g + b) > 0):
                 strip.setPixelColor(getCorrectedPixelIndex(i), Color(g, r, b))  #G, R, B
             i += 1
 

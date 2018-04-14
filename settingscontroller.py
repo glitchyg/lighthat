@@ -28,7 +28,8 @@ modes = {
         "text": "WORKS",
         "text_bg_color": (0, 0, 0),
         "text_text_color": (0, 0, 255),
-        "text_scroll_speed": -0.5
+        "text_scroll_speed": -0.5,
+        "text_show_strip": True
     },
     "penis": {
         "mode": MODE_TEXT,
@@ -36,7 +37,8 @@ modes = {
         "text_bg_color": (0, 0, 0),
         "text_text_color": (255, 255, 255),
         "text_start_offset": 23,
-        "text_scroll_speed": 0
+        "text_scroll_speed": 0,
+        "text_show_strip": True
     },
     "wipe": {
         "mode": MODE_COLOR_WIPE,
@@ -47,6 +49,7 @@ modes = {
         "mode": MODE_CHASE,
         "chase_color": Color(255, 0, 0),  # G, R, B
         "chase_delay": 20,
+        "chase_show_strip": True
     },
     "text_and_chase": {
         "mode": MODE_TEXT_AND_CHASE,
@@ -57,6 +60,8 @@ modes = {
         "text_scroll_speed": 0,
         "chase_color": Color(255, 0, 0),  # G, R, B
         "chase_delay": 20,
+        "text_show_strip": True,
+        "chase_show_strip": False
     }
 
 }
