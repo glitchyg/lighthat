@@ -14,6 +14,8 @@ TEXT_MODE_SOLID = 0
 settings = {
     "text": "hello world",
     "text_bg_mode": TEXT_MODE_SOLID,
+    "text_bg_color": (0, 0, 0),
+    "text_text_color": (255, 0, 0),
     "text_scroll_speed": -1,
     "mode": MODE_TEXT,
     "interrupt": False
@@ -38,9 +40,9 @@ def main_state_thread(settings):
         mode = (settings["mode"])
         if mode == MODE_TEXT:
             scroll_pos = settings["text_scroll_speed"] * run_counter
-            hat_display.show_text(strip, settings["text"], scroll_pos, True)
+            hat_display.show_text(strip, settings["text"], scroll_pos, True, settings["text_text_color"], settings["text_bg_color"])
             time.sleep(0.01)
-            
+
 
         run_counter += 1
 
