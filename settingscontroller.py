@@ -53,7 +53,7 @@ modes = {
     },
     "text_and_chase": {
         "mode": MODE_TEXT_AND_CHASE,
-        "text": "PENIS",
+        "text": "#SWAG",
         "text_bg_color": (0, 0, 0),
         "text_text_color": (255, 255, 255),
         "text_start_offset": 23,
