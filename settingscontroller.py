@@ -57,7 +57,7 @@ def start_mode(settings, mode):
     # print(mode_data)
     # print(mode, mode_data, settings)
     settings = merge_two_dicts(settings, mode_data)
-    # print(settings)
+    print(settings)
     return settings
 
 
