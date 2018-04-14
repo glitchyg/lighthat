@@ -24,7 +24,7 @@ def interrupted(settings):
 
 def main_state_thread(settings):
     strip = hat_display.init_display_controller()
-    settings = sc.start_mode(settings, "image_test")
+    settings = sc.start_mode(settings, "default")
     run_counter = 0
     last_mode_button_state = False
     hat_display.fill(strip, 0)
@@ -34,6 +34,12 @@ def main_state_thread(settings):
     while True:
         mode = (settings["mode"])
         total_delay = 0
+
+        #  --------  MODE IMAGE --------
+        if mode == sc.MODE_IMAGE or settings["image_show"]:
+            hat_display.show_image(strip, settings["image_file"], False)
+            if settings["image_show_strip"]:
+                strip.show()
 
         #  --------  MODE TEXT AND CHASE --------
         if mode == sc.MODE_TEXT_AND_CHASE:
@@ -52,7 +58,7 @@ def main_state_thread(settings):
             scroll_pos = settings["text_scroll_speed"] * run_counter
             if scroll_pos == 0:
                 scroll_pos = settings["text_start_offset"]
-            mask = (mode == sc.MODE_TEXT_AND_CHASE)
+            mask = settings["text_mask"]
             if not mask:
                 hat_display.fill(strip, 0)
             hat_display.show_text(strip, settings["text"], scroll_pos, True, int(settings["text_text_color"]),
@@ -61,11 +67,6 @@ def main_state_thread(settings):
                 strip.show()
             # time.sleep(50 / 1000)
 
-        #  --------  MODE IMAGE --------
-        if mode == sc.MODE_IMAGE:
-            hat_display.show_image(strip, settings["image_file"], False)
-            if settings["image_show_strip"]:
-                strip.show()
 
         #  --------  MODE WIPE --------
         if mode == sc.MODE_COLOR_WIPE:

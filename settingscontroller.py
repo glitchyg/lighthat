@@ -15,15 +15,17 @@ default_settings = {
     "text_text_color": (0, 255, 0),
     "text_scroll_speed": -0.5,
     "text_start_offset": 0,
+    "text_mask": False,
     "wipe_color": Color(0, 255, 0),
     "wipe_delay": 10,
     "chase_color": Color(0, 255, 0),
     "chase_delay": 20,
     "mode": MODE_TEXT,
     "interrupt": False,
-    "text_show_strip": True,
+    "text_show_strip": False,
     "chase_show_strip": False,
-    "image_show_strip": False
+    "image_show_strip": False,
+    "image_show": False
 }
 
 modes = {
@@ -55,7 +57,7 @@ modes = {
         "chase_delay": 20,
         "chase_show_strip": True
     },
-    "text_and_chase": {
+    "light_city": {
         "mode": MODE_TEXT_AND_CHASE,
         "text": "LIGHT CITY",
         "text_bg_color": (0, 0, 0),
@@ -65,10 +67,12 @@ modes = {
         "chase_color": Color(255, 0, 0),  # G, R, B
         "chase_delay": 20,
         "text_show_strip": True,
-        "chase_show_strip": False
+        "chase_show_strip": False,
+        "text_mask": True,
     },
     "image_test": {
         "mode": MODE_IMAGE,
+        "image_show": True,
         "image_file": "calibrate.png",
         "image_show_strip": True
     },
@@ -78,12 +82,16 @@ modes = {
         "text_bg_color": (0, 0, 0),
         "text_text_color": (0, 0, 255),
         "text_scroll_speed": -0.5,
-        "text_show_strip": True
+        "text_show_strip": True,
+        "image_show": True,
+        "image_file": "calibrate.png",
+        "image_show_strip": True,
+        "text_mask": True,
     }
 
 }
 
-mode_playlist = ["default", "penis", "wipe", "custom_text_file"]
+mode_playlist = ["default", "light_city", "penis", "wipe", "custom_text_file"]
 
 current_mode = 0
 

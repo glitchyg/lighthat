@@ -2,16 +2,26 @@ from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
 
+last_image_file = None
+last_image_data = None
 
 
 def get_image(file):
+    global last_image_data, last_image_file
+
+    if file == last_image_file:
+        return last_image_data
+
     img = Image.open(file)
     rgb_img = img.convert('RGB')
+
+    last_image_data = rgb_img
+
     return rgb_img
 
 
-
-def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False, text_color=(255, 0, 0), bg_color=(0, 0, 0)):
+def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False, text_color=(255, 0, 0),
+                   bg_color=(0, 0, 0)):
     # print(text_color)
     TOP_OFFSET = 1
 
@@ -54,4 +64,3 @@ def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False, t
 
 
 get_text_image("HELLO WORLD", 64, 8, -10, True, True)
-
