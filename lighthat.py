@@ -45,7 +45,7 @@ def main_state_thread(settings):
 
         # Check for mode change
         input_state = GPIO.input(16)
-        if input_state == True and last_mode_button_state == False:
+        if input_state and not last_mode_button_state:
             print("Button Pushed")
 
         last_mode_button_state = input_state
