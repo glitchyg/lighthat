@@ -152,7 +152,7 @@ modes = {
     "mario": {
         "mode": MODE_IMAGE,
         "image_show": True,
-        "image_file": "sonic.png",
+        "image_file": "mario.png",
         "image_show_strip": True,
     },
 }
