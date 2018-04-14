@@ -21,7 +21,7 @@ modes = {
     "default2": {
         "text": "Works",
         "text_scroll_speed": -1,
-        "text_text_color": PColor(0, 40, 25)
+        "text_text_color": 800
     },
     "default": {
         "text": "Hello World",
@@ -56,7 +56,7 @@ def start_mode(settings, mode):
     mode_data = modes[mode]
     # print(mode_data)
     # print(mode, mode_data, settings)
-    # settings = merge_two_dicts(settings, mode_data)
+    settings = merge_two_dicts(settings, mode_data)
     # print(settings)
     return settings
 
