@@ -127,9 +127,15 @@ modes = {
         "image_file": "frogeyes.png",
         "image_show_strip": True,
     },
+    "cats": {
+        "mode": MODE_IMAGE,
+        "image_show": True,
+        "image_file": "cats.png",
+        "image_show_strip": True,
+    },
 }
 
-mode_playlist = ["default", "skyline", "frog_eyes", "rainbow", "openworks", "matrix", "custom_text_file_0", "custom_text_file_1"]
+mode_playlist = ["default", "skyline", "frog_eyes", "rainbow", "openworks", "cats", "matrix", "custom_text_file_0", "custom_text_file_1"]
 
 current_mode = 0
 
