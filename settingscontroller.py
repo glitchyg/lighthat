@@ -48,13 +48,15 @@ def merge_two_dicts(x, y):
 def start_mode(mode):
     global modes, settings
     mode_data = modes[mode]
+    print(mode, mode_data, settings)
     settings = merge_two_dicts(settings, mode_data)
+    print(settings)
 
 
 def trigger_next_mode():
     print("Next Mode")
     global current_mode, mode_playlist
     current_mode += 1
-    if current_mode >= len(current_mode):
+    if current_mode >= len(mode_playlist):
         current_mode = 0
     start_mode(mode_playlist[current_mode])
