@@ -12,7 +12,6 @@ from neopixel import Color
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(16, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-
 # Used to tell if we should early out of whatever we are doing
 # This is used for when we are in a mode we want out of
 def interrupted(settings):
