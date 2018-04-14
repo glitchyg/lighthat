@@ -29,13 +29,13 @@ def main_state_thread(settings):
     while True:
         mode = (settings["mode"])
         if mode == sc.MODE_TEXT:
-            print("a")
+            # print("a")
             scroll_pos = settings["text_scroll_speed"] * run_counter
             hat_display.show_text(strip, settings["text"], scroll_pos, True, settings["text_text_color"],
                                   settings["text_bg_color"])
             time.sleep(50 / 1000)
         elif mode == sc.MODE_COLOR_WIPE:
-            print("b")
+            # print("b")
             finished = hat_display.colorWipe(strip, run_counter, settings["wipe_color"], settings["wipe_delay"])
             if finished:
                 settings = sc.trigger_next_mode(settings)

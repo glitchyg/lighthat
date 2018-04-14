@@ -13,7 +13,7 @@ default_settings = {
     "text_scroll_speed": -0.5,
     "wipe_color": Color(0, 255, 0),
     "wipe_delay": 10,
-    "mode": MODE_COLOR_WIPE,
+    "mode": MODE_TEXT,
     "interrupt": False
 }
 
@@ -50,7 +50,7 @@ def start_mode(settings, mode):
     mode_data = modes[mode]
     # print(mode_data)
     print(mode, mode_data, settings)
-    settings = merge_two_dicts(settings, mode_data)
+    # settings = merge_two_dicts(settings, mode_data)
     print(settings)
     return settings
 
