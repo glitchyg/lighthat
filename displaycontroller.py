@@ -133,7 +133,7 @@ def show_rgb_image(strip, rgb_img):
 
 def show_text(strip, text, offset, wrap, text_color, bg_color):
     print("B:", text_color)
-    rgb_img = tc.get_text_image(text, HAT_WIDTH, HAT_HEIGHT, offset, wrap, text_color, bg_color)
+    rgb_img = tc.get_text_image(text, HAT_WIDTH, HAT_HEIGHT, offset, wrap, False, text_color, bg_color)
     show_rgb_image(strip, rgb_img)
 
 
