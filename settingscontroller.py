@@ -94,8 +94,8 @@ modes = {
     "custom_text_file_1": {
         "mode": MODE_TEXT,
         "text": "EMPTY",
-        "text_bg_color": (0, 0, 0),
-        "text_text_color": (255, 246, 0),
+        "text_bg_color": (1, 0, 0),  #Almost black so it does not mask
+        "text_text_color": (0, 0, 0),
         "text_scroll_speed": -0.5,
         "text_show_strip": True,
         "rainbow_show": True,
