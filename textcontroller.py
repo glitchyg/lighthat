@@ -27,7 +27,7 @@ def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False, t
 
     img = Image.new('RGB', (width, height), bg_color)
 
-    fnt = ImageFont.truetype('munro.ttf', 7)
+    fnt = ImageFont.truetype('8bit.ttf', 7)
 
     # Create the drawer to place the text
     d = ImageDraw.Draw(img)

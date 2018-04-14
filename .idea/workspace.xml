@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30e0bfbb-bf2a-44d6-8001-69097c8a0d6a" name="Default" comment="" />
+    <list default="true" id="30e0bfbb-bf2a-44d6-8001-69097c8a0d6a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/textcontroller.py" afterPath="$PROJECT_DIR$/textcontroller.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +25,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settingscontroller.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settingscontroller.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settingscontroller.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-660">
@@ -56,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="textcontroller.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="textcontroller.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/textcontroller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="518">
+              <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -135,11 +137,11 @@
         <option value="$PROJECT_DIR$/webinterface.py" />
         <option value="$PROJECT_DIR$/neopixel.py" />
         <option value="$PROJECT_DIR$/TestButton.py" />
-        <option value="$PROJECT_DIR$/textcontroller.py" />
         <option value="$PROJECT_DIR$/custom_text.txt" />
         <option value="$PROJECT_DIR$/displaycontroller.py" />
         <option value="$PROJECT_DIR$/lighthat.py" />
         <option value="$PROJECT_DIR$/settingscontroller.py" />
+        <option value="$PROJECT_DIR$/textcontroller.py" />
       </list>
     </option>
   </component>
@@ -559,16 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/textcontroller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-762174762/time.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
@@ -611,6 +603,16 @@
         <state relative-caret-position="-660">
           <caret line="96" column="70" lean-forward="false" selection-start-line="96" selection-start-column="70" selection-end-line="96" selection-end-column="70" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/textcontroller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
