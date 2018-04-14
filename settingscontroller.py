@@ -82,7 +82,7 @@ modes = {
         "mode": MODE_TEXT,
         "text": "EMPTY",
         "text_bg_color": (0, 0, 0),
-        "text_text_color": (255, 246, 0),
+        "text_text_color": (34, 167, 243),
         "text_scroll_speed": -0.5,
         "text_show_strip": False,
         "image_show_strip": True,
