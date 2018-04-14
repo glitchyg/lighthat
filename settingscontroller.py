@@ -94,7 +94,7 @@ modes = {
     "custom_text_file_1": {
         "mode": MODE_TEXT,
         "text": "EMPTY",
-        "text_bg_color": (1, 0, 0),  #Almost black so it does not mask
+        "text_bg_color": (1, 0, 0),  # Almost black so it does not mask
         "text_text_color": (0, 0, 0),
         "text_scroll_speed": -0.5,
         "text_show_strip": True,
@@ -121,9 +121,15 @@ modes = {
         "image_file": "matrix.png",
         "image_show_strip": True,
     },
+    "frog_eyes": {
+        "mode": MODE_IMAGE,
+        "image_show": True,
+        "image_file": "matrix.png",
+        "image_show_strip": True,
+    },
 }
 
-mode_playlist = ["default", "skyline", "rainbow", "openworks", "matrix", "custom_text_file_0", "custom_text_file_1"]
+mode_playlist = ["default", "skyline", "frog_eyes", "rainbow", "openworks", "matrix", "custom_text_file_0", "custom_text_file_1"]
 
 current_mode = 0
 
