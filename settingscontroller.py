@@ -44,16 +44,16 @@ mode_playlist = ["default", "penis"]
 current_mode = 0
 
 
-def merge_two_dicts(x, y):
+def merge_two_dicts(current, new):
     # print(type(x["text_text_color"]))
-    z = x.copy()  # start with x's keys and values
-    z.update(y)  # modifies z with y's keys and values & returns None
+    updated = current.copy()  # start with x's keys and values
+    updated.update(new)  # modifies z with y's keys and values & returns None
 
-    tc = y["text_text_color"]
-    z["text_text_color"] = PColor(tc[0], tc[1], tc[2])
+    tc = new["text_text_color"]
+    updated["text_text_color"] = PColor(tc[0], tc[1], tc[2])
     # print(type(z["text_text_color"]))
 
-    return x
+    return z
 
 
 def start_mode(settings, mode):
