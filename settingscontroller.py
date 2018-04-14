@@ -21,7 +21,7 @@ modes = {
     "default2": {
         "text": "Works",
         "text_scroll_speed": -1,
-        "text_text_color": (0, 40, 25)
+        # "text_text_color": (0, 40, 25)
     },
     "default": {
         "text": "Hello World",
