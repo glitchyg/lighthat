@@ -22,6 +22,8 @@ def main_state_thread(settings):
 
     settings = start_mode(settings, "default")
 
+    print(settings)
+
     run_counter = 0
 
     while True:
