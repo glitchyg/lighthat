@@ -27,15 +27,15 @@ modes = {
     },
     "penis": {
         "mode": MODE_TEXT,
-        "text": "penis",
+        "text": "PENIS",
         "text_bg_color": (0, 0, 0),
         "text_text_color": (255, 255, 255),
-        "text_scroll_speed": -2
+        "text_scroll_speed": -0.2
     },
     "wipe": {
         "mode": MODE_COLOR_WIPE,
         "wipe_color": Color(0, 255, 0),
-        "wipe_delay": 10,
+        "wipe_delay": 1,
     }
 }
 
