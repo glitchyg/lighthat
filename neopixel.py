@@ -13,6 +13,14 @@ def Color(red, green, blue, white = 0):
 	return (white << 24) | (red << 16)| (green << 8) | blue
 
 
+def PColor(red, green, blue, white = 0):
+	"""Convert the provided red, green, blue color to a 24-bit color value.
+	Each color component should be a value 0-255 where 0 is the lowest intensity
+	and 255 is the highest intensity.
+	"""
+	return (white << 24) | (blue << 16)| (green << 8) | red
+
+
 class _LED_Data(object):
 	"""Wrapper class which makes a SWIG LED color data array look and feel like
 	a Python list of integers.
