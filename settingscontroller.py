@@ -31,7 +31,7 @@ default_settings = {
 }
 
 modes = {
-    "default": {
+    "default_old": {
         "mode": MODE_TEXT,
         "text": "WORKS",
         "text_bg_color": (0, 0, 0),
@@ -59,7 +59,7 @@ modes = {
         "chase_delay": 20,
         "chase_show_strip": True
     },
-    "light_city": {
+    "default": {
         "mode": MODE_TEXT_AND_CHASE,
         "text": "LIGHT CITY",
         "text_bg_color": (0, 0, 0),
@@ -123,7 +123,7 @@ modes = {
     },
 }
 
-mode_playlist = ["default", "skyline", "light_city", "rainbow", "openworks", "matrix", "custom_text_file_0", "custom_text_file_1"]
+mode_playlist = ["default", "skyline", "rainbow", "openworks", "matrix", "custom_text_file_0", "custom_text_file_1"]
 
 current_mode = 0
 

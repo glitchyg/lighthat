@@ -7,6 +7,7 @@ from PIL import Image
 import textcontroller as tc
 import argparse
 import math
+from random import randint
 
 # LED strip configuration:
 LED_COUNT = 512  # Number of LED pixels.
@@ -72,12 +73,15 @@ def colorWipe(strip, run_counter, color, wait_ms=50):
     return False
 
 
+# def fake_eq(strip, run_counter, color)
+
 # Define functions which animate LEDs in various ways.
 def fill(strip, color):
     """Wipe color across display a pixel at a time."""
     for i in range(strip.numPixels()):
         strip.setPixelColor(i, color)
     # strip.show()
+
 
 
 def theaterChase(strip, run_counter, color, wait_ms=50):
