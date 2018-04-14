@@ -20,7 +20,7 @@ default_settings = {
 modes = {
     "default": {
         "text": "Works",
-        "text_scroll_speed": -0.5
+        "text_scroll_speed": -2
     },
     "default2": {
         "text": "Hello World",
@@ -53,9 +53,9 @@ def start_mode(settings, mode):
     global modes
     mode_data = modes[mode]
     # print(mode_data)
-    print(mode, mode_data, settings)
+    # print(mode, mode_data, settings)
     settings = merge_two_dicts(settings, mode_data)
-    print(settings)
+    # print(settings)
     return settings
 
 
