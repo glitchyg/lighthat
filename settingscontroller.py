@@ -97,7 +97,7 @@ modes = {
         "image_file": "skyline.png",
         "image_show_strip": True,
         "image_mask": True,
-        "rainbow_show": False,
+        "rainbow_show": True,
     },
 
 }
