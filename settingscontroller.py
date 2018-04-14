@@ -20,7 +20,10 @@ default_settings = {
     "chase_color": Color(0, 255, 0),
     "chase_delay": 20,
     "mode": MODE_TEXT,
-    "interrupt": False
+    "interrupt": False,
+    "text_show_strip": True,
+    "chase_show_strip": False,
+    "image_show_strip": False
 }
 
 modes = {
@@ -66,7 +69,8 @@ modes = {
     },
     "image_test": {
         "mode": MODE_IMAGE,
-        "image_file": "calibrate.png"
+        "image_file": "calibrate.png",
+        "image_show_strip": True
     }
 
 }
@@ -74,6 +78,10 @@ modes = {
 mode_playlist = ["default", "penis", "wipe"]
 
 current_mode = 0
+
+
+def reset_settings(settings):
+    return merge_two_dicts(settings, default_settings)
 
 
 def merge_two_dicts(current, new):

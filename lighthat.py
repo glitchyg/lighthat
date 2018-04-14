@@ -62,9 +62,10 @@ def main_state_thread(settings):
             # time.sleep(50 / 1000)
 
         #  --------  MODE IMAGE --------
-
         if mode == sc.MODE_IMAGE:
             hat_display.show_image(strip, settings["image_file"], False)
+            if settings["image_show_strip"]:
+                strip.show()
 
         #  --------  MODE WIPE --------
         if mode == sc.MODE_COLOR_WIPE:
@@ -86,6 +87,7 @@ def main_state_thread(settings):
             print("Button Pushed")
             run_counter = 0
             hat_display.fill(strip, 0)
+            settings = sc.reset_settings(settings)
             settings = sc.trigger_next_mode(settings)
 
         last_mode_button_state = input_state
