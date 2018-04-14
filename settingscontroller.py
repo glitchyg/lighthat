@@ -57,7 +57,7 @@ modes = {
         "text_bg_color": (0, 0, 0),
         "text_text_color": (255, 255, 255),
         "text_start_offset": 23,
-        "text_scroll_speed": -0.2,
+        "text_scroll_speed": -1,
         "chase_color": Color(255, 0, 0),  # G, R, B
         "chase_delay": 20,
         "text_show_strip": True,
