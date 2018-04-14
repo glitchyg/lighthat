@@ -16,8 +16,8 @@
       <file leaf-file-name="lighthat.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lighthat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
               <folding>
                 <element signature="e#24#47#0" expanded="true" />
               </folding>
@@ -28,7 +28,7 @@
       <file leaf-file-name="settingscontroller.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settingscontroller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
+            <state relative-caret-position="737">
               <caret line="62" column="32" lean-forward="true" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
               <folding />
             </state>
@@ -38,8 +38,8 @@
       <file leaf-file-name="displaycontroller.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/displaycontroller.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="138" column="38" lean-forward="true" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="38" />
+            <state relative-caret-position="530">
+              <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="88" selection-end-column="65" />
               <folding>
                 <element signature="e#25#36#0" expanded="true" />
                 <element signature="e#804#1364#0" expanded="false" />
@@ -574,8 +574,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/displaycontroller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="138" column="38" lean-forward="true" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="38" />
+        <state relative-caret-position="530">
+          <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="8" selection-end-line="88" selection-end-column="65" />
           <folding>
             <element signature="e#25#36#0" expanded="true" />
             <element signature="e#804#1364#0" expanded="false" />
@@ -585,7 +585,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/settingscontroller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
+        <state relative-caret-position="737">
           <caret line="62" column="32" lean-forward="true" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
           <folding />
         </state>
@@ -593,8 +593,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lighthat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="345">
+          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
           <folding>
             <element signature="e#24#47#0" expanded="true" />
           </folding>

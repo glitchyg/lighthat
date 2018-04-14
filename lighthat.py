@@ -30,7 +30,7 @@ def main_state_thread(settings):
     strip.show()
 
     while True:
-        mode = (settings["mode"])
+        mode = (settings["chase"])
 
         #  --------  MODE TEXT AND CHASE --------
         if mode == sc.MODE_TEXT_AND_CHASE:
