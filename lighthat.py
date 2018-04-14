@@ -41,8 +41,8 @@ def main_state_thread(settings):
         if mode == sc.MODE_CHASE or mode == sc.MODE_TEXT_AND_CHASE:
             print("a")
             hat_display.theaterChase(strip, run_counter, Color(0, 255, 0), 50)
-            # if settings["chase_show_strip"]:
-            #     strip.show()
+            if settings["chase_show_strip"]:
+                strip.show()
 
         #  --------  MODE TEXT --------
         if mode == sc.MODE_TEXT or mode == sc.MODE_TEXT_AND_CHASE:

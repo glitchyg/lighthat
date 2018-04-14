@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="30e0bfbb-bf2a-44d6-8001-69097c8a0d6a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/displaycontroller.py" afterPath="$PROJECT_DIR$/displaycontroller.py" />
+      <change beforePath="$PROJECT_DIR$/lighthat.py" afterPath="$PROJECT_DIR$/lighthat.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="675">
-      <file leaf-file-name="lighthat.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lighthat.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lighthat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="777">
-              <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="36" />
+            <state relative-caret-position="703">
+              <caret line="40" column="67" lean-forward="true" selection-start-line="40" selection-start-column="67" selection-end-line="40" selection-end-column="67" />
               <folding>
                 <element signature="e#24#47#0" expanded="true" />
               </folding>
@@ -35,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="displaycontroller.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="displaycontroller.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/displaycontroller.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="530">
-              <caret line="87" column="20" lean-forward="false" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+              <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="10" selection-end-line="89" selection-end-column="67" />
               <folding>
                 <element signature="e#25#36#0" expanded="true" />
                 <element signature="e#804#1364#0" expanded="false" />
@@ -141,8 +142,8 @@
         <option value="$PROJECT_DIR$/textcontroller.py" />
         <option value="$PROJECT_DIR$/TestButton.py" />
         <option value="$PROJECT_DIR$/settingscontroller.py" />
-        <option value="$PROJECT_DIR$/lighthat.py" />
         <option value="$PROJECT_DIR$/displaycontroller.py" />
+        <option value="$PROJECT_DIR$/lighthat.py" />
       </list>
     </option>
   </component>
@@ -580,23 +581,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lighthat.py">
+    <entry file="file://$PROJECT_DIR$/displaycontroller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="36" />
+        <state relative-caret-position="530">
+          <caret line="87" column="8" lean-forward="true" selection-start-line="87" selection-start-column="10" selection-end-line="89" selection-end-column="67" />
           <folding>
-            <element signature="e#24#47#0" expanded="true" />
+            <element signature="e#25#36#0" expanded="true" />
+            <element signature="e#804#1364#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/displaycontroller.py">
+    <entry file="file://$PROJECT_DIR$/lighthat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="87" column="20" lean-forward="false" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+        <state relative-caret-position="703">
+          <caret line="40" column="67" lean-forward="true" selection-start-line="40" selection-start-column="67" selection-end-line="40" selection-end-column="67" />
           <folding>
-            <element signature="e#25#36#0" expanded="true" />
-            <element signature="e#804#1364#0" expanded="false" />
+            <element signature="e#24#47#0" expanded="true" />
           </folding>
         </state>
       </provider>

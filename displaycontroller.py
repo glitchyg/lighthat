@@ -85,9 +85,9 @@ def theaterChase(strip, run_counter, color, wait_ms=50):
         for i in range(0, strip.numPixels(), 3):
             strip.setPixelColor(getCorrectedPixelIndex(i + q), color)
         time.sleep(wait_ms / 1000.0)
-        strip.show()
-        for i in range(0, strip.numPixels(), 3):
-            strip.setPixelColor(getCorrectedPixelIndex(i + q), 0)
+        # strip.show()
+        # for i in range(0, strip.numPixels(), 3):
+        #     strip.setPixelColor(getCorrectedPixelIndex(i + q), 0)
 
 
 
