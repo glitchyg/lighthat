@@ -99,10 +99,15 @@ modes = {
         "image_mask": True,
         "rainbow_show": True,
     },
-
+    "openworks": {
+        "mode": MODE_IMAGE,
+        "image_show": True,
+        "image_file": "openworks.png",
+        "image_show_strip": True,
+    },
 }
 
-mode_playlist = ["default", "skyline", "light_city", "rainbow", "custom_text_file"]
+mode_playlist = ["default", "skyline", "light_city", "rainbow", "openworks", "custom_text_file"]
 
 current_mode = 0
 
