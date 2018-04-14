@@ -35,6 +35,10 @@ def main_state_thread(settings):
         mode = (settings["mode"])
         total_delay = 0
 
+        #  --------  ADDONS --------
+        if settings["rainbow_show"]:
+            hat_display.rainbow(strip, run_counter)
+
         #  --------  MODE TEXT AND CHASE --------
         if mode == sc.MODE_TEXT_AND_CHASE:
             hat_display.fill(strip, 0)
@@ -77,8 +81,6 @@ def main_state_thread(settings):
             if settings["image_show_strip"]:
                 strip.show()
 
-        hat_display.rainbow(strip, run_counter)
-        strip.show()
 
         # Take all the time we wanted to delay and do it at the end
         time.sleep(total_delay / 1000.0)
