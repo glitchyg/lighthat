@@ -19,7 +19,8 @@ default_settings = {
 
 modes = {
     "default": {
-        "text": "Works"
+        "text": "Works",
+        "text_scroll_speed": -0.5
     },
     "default2": {
         "text": "Hello World",
