@@ -8,6 +8,7 @@ import webinterface as web
 from neopixel import Color
 
 MODE_TEXT = 0
+MODE_COLOR_WIPE = 1
 
 TEXT_MODE_SOLID = 0
 
@@ -17,6 +18,7 @@ settings = {
     "text_bg_color": (0, 0, 0),
     "text_text_color": (255, 0, 0),
     "text_scroll_speed": -0.5,
+    "wipe_color": (0, 255, 0),
     "mode": MODE_TEXT,
     "interrupt": False
 }
@@ -42,6 +44,10 @@ def main_state_thread(settings):
             scroll_pos = settings["text_scroll_speed"] * run_counter
             hat_display.show_text(strip, settings["text"], scroll_pos, True, settings["text_text_color"], settings["text_bg_color"])
             time.sleep(50 / 1000)
+        elif mode == MODE_COLOR_WIPE:
+            finished = hat_display.colorWipe(strip, run_counter, settings["wipe_color"])
+            if finished:
+                print("FUCK YEA")
 
 
         run_counter += 1
