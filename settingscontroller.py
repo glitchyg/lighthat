@@ -18,23 +18,23 @@ default_settings = {
 }
 
 modes = {
-    "default": {
+    "default2": {
         "text": "Works",
         "text_scroll_speed": -1,
         "text_text_color": (0, 40, 25)
     },
-    "default2": {
+    "default": {
         "text": "Hello World",
         "mode": MODE_TEXT,
-        "text_bg_color": (0, 0, 0),
-        "text_text_color": (0, 40, 25),
+        "text_bg_color": PColor(0, 0, 0),
+        "text_text_color": PColor(0, 40, 25),
         "text_scroll_speed": -0.5
     },
     "penis": {
         "text": "penis",
         "mode": MODE_TEXT,
-        "text_bg_color": (0, 0, 0),
-        "text_text_color": (255, 255, 255),
+        "text_bg_color": PColor(0, 0, 0),
+        "text_text_color": PColor(255, 255, 255),
         "text_scroll_speed": -2
     }
 }
@@ -55,7 +55,7 @@ def start_mode(settings, mode):
     mode_data = modes[mode]
     # print(mode_data)
     # print(mode, mode_data, settings)
-    # settings = merge_two_dicts(settings, mode_data)
+    settings = merge_two_dicts(settings, mode_data)
     # print(settings)
     return settings
 
