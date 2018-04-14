@@ -23,7 +23,7 @@ def interrupted(settings):
 
 def main_state_thread(settings):
     strip = hat_display.init_display_controller()
-    settings = sc.start_mode(settings, "wipe")
+    settings = sc.start_mode(settings, "chase")
     run_counter = 0
     last_mode_button_state = False
 
@@ -42,6 +42,8 @@ def main_state_thread(settings):
                 run_counter = 0
                 hat_display.fill(strip, 0)
                 settings = sc.trigger_next_mode(settings)
+        elif mode == sc.MODE_CHASE:
+            hat_display.theaterChase(strip, run_counter, settings["chase_color"], settings["chase_delay"])
 
         run_counter += 1
 

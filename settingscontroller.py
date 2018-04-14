@@ -2,6 +2,7 @@ from neopixel import Color, PColor
 
 MODE_TEXT = 0
 MODE_COLOR_WIPE = 1
+MODE_CHASE = 2
 
 TEXT_MODE_SOLID = 0
 
@@ -13,6 +14,8 @@ default_settings = {
     "text_scroll_speed": -0.5,
     "wipe_color": Color(0, 255, 0),
     "wipe_delay": 10,
+    "chase_color": Color(0, 255, 0),
+    "chase_delay": 20,
     "mode": MODE_TEXT,
     "interrupt": False
 }
@@ -36,6 +39,11 @@ modes = {
         "mode": MODE_COLOR_WIPE,
         "wipe_color": Color(0, 255, 0),
         "wipe_delay": 1,
+    },
+    "chase": {
+        "mode": MODE_CHASE,
+        "chase_color": Color(0, 255, 0),
+        "chase_delay": 20,
     }
 }
 
