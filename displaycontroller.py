@@ -99,11 +99,29 @@ def wheel(pos):
         return Color(0, pos * 3, 255 - pos * 3)
 
 
+def lerp(percent, start, end):
+    return (1 - percent) * start + percent * end
+
+
+def gradient_wheel(pos, color_from, color_to):
+    percent = float(pos) / 255
+    r = lerp(percent, color_from[0], color_to[0])
+    g = lerp(percent, color_from[1], color_to[1])
+    b = lerp(percent, color_from[2], color_to[2])
+    return Color(r, g, b)
+
+
 def rainbow(strip, run_counter, speed=1):
     """Draw rainbow that fades across all pixels at once."""
     j = (run_counter * speed) % 256
     for i in range(strip.numPixels()):
         strip.setPixelColor(getCorrectedPixelIndex(i), wheel((i + j) & 255))
+
+
+def gradient(strip, run_counter, speed, color_from, color_to):
+    j = (run_counter * speed) % 256
+    for i in range(strip.numPixels()):
+        strip.setPixelColor(getCorrectedPixelIndex(i), gradient_wheel(((i + j) & 255), color_from, color_to))
 
 
 def rainbowCycle(strip, wait_ms=20, iterations=5):

@@ -28,7 +28,11 @@ default_settings = {
     "image_show": False,
     "image_mask": False,
     "rainbow_show": False,
-    "rainbow_speed": 1
+    "rainbow_speed": 1,
+    "gradient_show": False,
+    "gradient_speed": 1,
+    "gradient_color_from": (0, 255, 0),
+    "gradient_color_to": (255, 0, 0),
 }
 
 modes = {
@@ -170,8 +174,8 @@ modes = {
     },
 }
 
-mode_playlist = ["default", "light_city_2", "skyline", "adventure_time", "sonic", "frog_eyes", "rainbow", "openworks",
-                 "cats", "mario", "matrix", "custom_text_file_0", "custom_text_file_1"]
+mode_playlist = ["default", "light_city_2", "adventure_time", "sonic", "rainbow", "openworks",
+                 "cats", "mario", "matrix"]
 
 current_mode = 0
 
@@ -200,6 +204,14 @@ def merge_two_dicts(current, new):
     if "text_bg_color" in new:
         tbc = new["text_bg_color"]
         updated["text_bg_color"] = PColor(tbc[0], tbc[1], tbc[2])
+
+    if "gradient_color_from" in new:
+        gcf = new["gradient_color_from"]
+        updated["gradient_color_from"] = PColor(gcf[0], gcf[1], gcf[2])
+
+    if "gradient_color_to" in new:
+        gct = new["gradient_color_to"]
+        updated["gradient_color_to"] = PColor(gct[0], gct[1], gct[2])
 
     return updated
 

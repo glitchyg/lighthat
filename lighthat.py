@@ -23,7 +23,7 @@ def interrupted(settings):
 
 def main_state_thread(settings):
     strip = hat_display.init_display_controller()
-    settings = sc.start_mode(settings, "default")
+    settings = sc.start_mode(settings, "adventure_time")
     run_counter = 0
     last_mode_button_state = False
     hat_display.fill(strip, 0)
@@ -38,6 +38,12 @@ def main_state_thread(settings):
         if settings["rainbow_show"]:
             speed = settings["rainbow_speed"]
             hat_display.rainbow(strip, run_counter, speed)
+        if settings["gradient_show"]:
+            speed = settings["gradient_speed"]
+            color_from = settings["gradient_color_from"]
+            color_to = settings["gradient_color_to"]
+            hat_display.gradient(strip, run_counter, speed, color_from, color_to)
+
 
         #  --------  MODE TEXT AND CHASE --------
         if mode == sc.MODE_TEXT_AND_CHASE:
