@@ -13,7 +13,7 @@ def hello():
     return "Hello World!"
 
 
-@app.route('/text/<str:text>')
+@app.route('/text/<string:text>')
 def set_text(text):
     settings = {"text": text}
     set_settings_update(settings)
