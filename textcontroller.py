@@ -8,7 +8,7 @@ last_image_data = None
 last_gif_file = None
 last_gif_data = None
 last_gif_frame_data = None
-last_gif_frame = 0
+last_gif_frame = -1
 
 
 # for frame in range(0,imageObject.n_frames):
@@ -39,6 +39,8 @@ def get_gif(file, frame):
         img.seek(frame)
 
     rgb_img = img.convert('RGB')
+
+    rgb_img.save('gif.png')
 
     last_gif_frame_data = rgb_img
 
@@ -104,4 +106,5 @@ def get_text_image(text, width, height, offset=0, wrap=False, saveImage=False, t
     return rgb_img
 
 
-get_text_image("HELLO WORLD", 64, 8, -10, True, True)
+# get_text_image("HELLO WORLD", 64, 8, -10, True, True)
+# get_gif("test.gif", 3)
