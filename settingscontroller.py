@@ -186,7 +186,7 @@ modes = {
     },
 }
 
-mode_playlist = ["default", "light_city_2", "adventure_time", "sonic", "rainbow", "openworks",
+mode_playlist = ["default", "kimbra", "light_city_2", "adventure_time", "sonic", "rainbow", "openworks",
                  "cats", "mario", "matrix"]
 
 current_mode = 0

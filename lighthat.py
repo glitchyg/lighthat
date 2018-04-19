@@ -22,6 +22,7 @@ def interrupted(settings):
 
 
 def main_state_thread(settings):
+    print("State Thread Started")
     strip = hat_display.init_display_controller()
     settings = sc.start_mode(settings, "kimbra")
     run_counter = 0
