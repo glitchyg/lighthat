@@ -172,6 +172,14 @@ modes = {
         "image_file": "mario.png",
         "image_show_strip": True,
     },
+    "kimbra": {
+        "mode": MODE_IMAGE,
+        "image_show": True,
+        "image_file": "at.png",
+        "image_show_strip": True,
+        "image_mask": True,
+        "gradient_show": True,
+    },
 }
 
 mode_playlist = ["default", "light_city_2", "adventure_time", "sonic", "rainbow", "openworks",
