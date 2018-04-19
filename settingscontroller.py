@@ -179,7 +179,7 @@ modes = {
         "image_show_strip": True,
         "image_mask": True,
         "gradient_show": True,
-        "gradient_speed": 4,
+        "gradient_speed": 20,
         "gradient_color_from": (87, 255, 200), # G, R, B
         # "gradient_color_from": (233, 87, 246), # G, R, B
         "gradient_color_to": (174, 83, 230),
