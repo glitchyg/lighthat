@@ -100,7 +100,7 @@ def wheel(pos):
 
 
 def lerp(percent, start, end):
-    return (1 - percent) * start + percent * end
+    return int((1 - percent) * start + percent * end)
 
 
 def gradient_wheel(pos, color_from, color_to):
