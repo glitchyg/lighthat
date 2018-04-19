@@ -4,10 +4,16 @@ app = Flask(__name__)
 
 strip = None
 
+
 @app.route("/")
 def hello():
-    strip.setBrightness(60)
     return "Hello World!"
+
+
+@app.route('/bright/<int:brightness>')
+def set_brightness(brightness):
+    strip.setBrightness(60)
+    return "Brightness set to: " + brightness
 
 
 def web_interface_thread(settings, input_strip):
