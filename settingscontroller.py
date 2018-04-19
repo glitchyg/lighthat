@@ -175,14 +175,14 @@ modes = {
     "kimbra": {
         "mode": MODE_IMAGE,
         "image_show": False,
-        "image_file": "calibrate.png",
+        "image_file": "empty.png",
         "image_show_strip": True,
         "image_mask": True,
         "gradient_show": True,
         "gradient_speed": 4,
         "gradient_color_from": (87, 233, 246), # G, R, B
         # "gradient_color_from": (233, 87, 246), # G, R, B
-        "gradient_color_to": (255, 0, 0),
+        "gradient_color_to": (174, 83, 230),
     },
 }
 
