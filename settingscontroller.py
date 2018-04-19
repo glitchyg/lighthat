@@ -175,7 +175,7 @@ modes = {
     "kimbra": {
         "mode": MODE_IMAGE,
         "image_show": False,
-        "image_file": "empty.png",
+        "image_file": "kimbra.png",
         "image_show_strip": True,
         "image_mask": True,
         "gradient_show": True,
