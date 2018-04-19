@@ -121,7 +121,7 @@ def rainbow(strip, run_counter, speed=1):
 def gradient(strip, run_counter, speed, color_from, color_to):
     j = (run_counter * speed) % 256
     for i in range(strip.numPixels()):
-        strip.setPixelColor(getCorrectedPixelIndex(i), gradient_wheel(((i + j) & 255), color_from, color_to))
+        strip.setPixelColor(getCorrectedPixelIndex(i), gradient_wheel(((i + j)), color_from, color_to))
 
 
 def rainbowCycle(strip, wait_ms=20, iterations=5):
