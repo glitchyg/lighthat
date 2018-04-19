@@ -100,7 +100,10 @@ def wheel(pos):
 
 
 def lerp(percent, start, end):
-    return int((1 - percent) * start + percent * end)
+    return_value = int((1 - percent) * start + percent * end)
+    if return_value > 255:
+        return_value = 255
+    return return_value
 
 
 def gradient_wheel(pos, color_from, color_to):
@@ -128,7 +131,9 @@ def rainbow(strip, run_counter, speed=1):
 def gradient(strip, run_counter, speed, color_from, color_to):
     j = (run_counter * speed) % 256
     for i in range(strip.numPixels()):
-        strip.setPixelColor(getCorrectedPixelIndex(i), gradient_wheel(((i + j) & 255), color_from, color_to))
+        pos = ((i + j) & 255)
+        gradient_color = gradient_wheel(pos, color_from, color_to)
+        strip.setPixelColor(getCorrectedPixelIndex(i), gradient_color)
 
 
 def rainbowCycle(strip, wait_ms=20, iterations=5):
