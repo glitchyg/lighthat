@@ -179,6 +179,7 @@ modes = {
         "image_show_strip": True,
         "image_mask": True,
         "gradient_show": True,
+        "gradient_speed": 4,
     },
 }
 
