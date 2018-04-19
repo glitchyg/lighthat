@@ -113,7 +113,6 @@ def main_state_thread(settings):
                 settings["text"] = content
 
         web_settings = web.get_settings_update()
-        print(web_settings)
         if web_settings is not None:
             print("Updating settings from web")
             settings = sc.merge_two_dicts(settings, web_settings)
