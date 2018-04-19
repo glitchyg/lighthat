@@ -28,7 +28,7 @@ def main_state_thread(settings):
 
     thread.start_new_thread(web.web_interface_thread, (settings, strip))
 
-    settings = sc.start_mode(settings, "giftest")
+    settings = sc.start_mode(settings, "default")
     run_counter = 0
     last_mode_button_state = False
     hat_display.fill(strip, 0)

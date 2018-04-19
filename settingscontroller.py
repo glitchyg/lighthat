@@ -196,9 +196,16 @@ modes = {
         "gif_show": True,
         "gif_image": "test.gif",
     },
+    "kimbragif0": {
+        "mode": MODE_NONE,
+        "none_show_strip": True,
+        "none_delay": 1500,
+        "gif_show": True,
+        "gif_image": "kimbra0.gif",
+    },
 }
 
-mode_playlist = ["default", "kimbra", "light_city_2", "adventure_time", "sonic", "rainbow", "openworks",
+mode_playlist = ["default", "kimbra", "kimbragif0", "light_city_2", "adventure_time", "sonic", "rainbow", "openworks",
                  "cats", "mario", "matrix"]
 
 current_mode = 0
