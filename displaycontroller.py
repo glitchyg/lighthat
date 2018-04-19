@@ -108,8 +108,19 @@ def lerp(percent, start, end):
     return return_value
 
 
+def wrap_int(v, min, max):
+    if v >= max:
+        return min + (v - max)
+    elif v < min:
+        return max - (min - v)
+    else:
+        return v
+
+
+
 def gradient_wheel(index, max, offset, color_from, color_to):
-    pos = float(index) / float(max)
+    correct_index = wrap_int((index + offset), 0, max)
+    pos = float(correct_index) / float(max)
     if pos < 0.5:
         percent = pos * 2
         r = lerp(percent, color_from[0], color_to[0])
