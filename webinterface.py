@@ -34,13 +34,14 @@ def web_interface_thread(settings, input_strip):
 
 def set_settings_update(new_settings):
     global settings_to_update, needs_settings_update
+    print(new_settings)
     settings_to_update = new_settings
-    settings_to_update = True
+    needs_settings_update = True
 
 
 def get_settings_update():
     global settings_to_update, needs_settings_update
     if needs_settings_update:
-        settings_to_update = False
+        needs_settings_update = False
         return settings_to_update
     return None
