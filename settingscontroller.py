@@ -218,11 +218,11 @@ def merge_two_dicts(current, new):
 
     if "gradient_color_from" in new:
         gcf = new["gradient_color_from"]
-        updated["gradient_color_from"] = PColor(gcf[0], gcf[1], gcf[2])
+        updated["gradient_color_from"] = (gcf[0], gcf[1], gcf[2])
 
     if "gradient_color_to" in new:
         gct = new["gradient_color_to"]
-        updated["gradient_color_to"] = PColor(gct[0], gct[1], gct[2])
+        updated["gradient_color_to"] = (gct[0], gct[1], gct[2])
 
     return updated
 
