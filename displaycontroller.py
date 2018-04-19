@@ -117,9 +117,8 @@ def wrap_int(v, min, max):
         return v
 
 
-
 def gradient_wheel(index, max, offset, color_from, color_to):
-    correct_index = wrap_int((index + offset), 0, max)
+    correct_index = wrap_int((index + (offset % max)), 0, max)
     pos = float(correct_index) / float(max)
     # r = lerp(pos, color_from[0], color_to[0])
     # g = lerp(pos, color_from[1], color_to[1])
@@ -150,7 +149,7 @@ def gradient(strip, run_counter, speed, color_from, color_to):
     # j = (run_counter * speed) % 256
     offset = speed * run_counter
     for i in range(strip.numPixels()):
-        gradient_color = gradient_wheel(i, strip.numPixels(), offset,  color_from, color_to)
+        gradient_color = gradient_wheel(i, strip.numPixels(), offset, color_from, color_to)
         strip.setPixelColor(getCorrectedPixelIndex(i), gradient_color)
 
 
