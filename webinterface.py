@@ -13,11 +13,11 @@ def hello():
     return "Hello World!"
 
 
-@app.route("/test/")
-def test():
-    settings = {"text": "O YEA"}
+@app.route('/text/<str:text>')
+def set_text(text):
+    settings = {"text": text}
     set_settings_update(settings)
-    return "Test Set"
+    return "Text set to: " + text
 
 
 @app.route('/bright/<int:brightness>')
