@@ -112,6 +112,11 @@ def main_state_thread(settings):
                     content = f.readline()
                 settings["text"] = content
 
+        web_settings = web.get_settings_update()
+        if web_settings:
+            print("Updating settings from web")
+            settings = sc.merge_two_dicts(settings, web_settings)
+
         last_mode_button_state = input_state
 
 

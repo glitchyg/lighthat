@@ -13,8 +13,8 @@ def hello():
     return "Hello World!"
 
 
-@app.route("/test")
-def hello():
+@app.route("/test/")
+def test():
     settings = {"text": "O YEA"}
     set_settings_update(settings)
     return "Test Set"
