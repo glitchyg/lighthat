@@ -35,6 +35,7 @@ def web_interface_thread(settings, input_strip):
 def set_settings_update(new_settings):
     global settings_to_update, needs_settings_update
     settings_to_update = new_settings
+    settings_to_update = True
 
 
 def get_settings_update():
