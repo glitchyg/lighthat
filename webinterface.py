@@ -12,8 +12,8 @@ def hello():
 
 @app.route('/bright/<int:brightness>')
 def set_brightness(brightness):
-    strip.setBrightness(60)
-    return "Brightness set to: " + brightness
+    strip.setBrightness(brightness)
+    return "Brightness set to: " + str(brightness)
 
 
 def web_interface_thread(settings, input_strip):
