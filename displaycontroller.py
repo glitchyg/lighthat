@@ -104,7 +104,9 @@ def lerp(percent, start, end):
 
     if return_value > 254:
         return_value = 255
-    print(return_value)
+    if return_value < 0:
+        return_value = 0
+    # print(return_value)
     return return_value
 
 
