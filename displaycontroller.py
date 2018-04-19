@@ -190,6 +190,11 @@ def show_image(strip, image_file, mask):
     show_rgb_image(strip, rgb_img, mask)
 
 
+def show_gif(strip, gif_file, frame, mask):
+    rgb_img = tc.get_gif(gif_file, frame)
+    show_rgb_image(strip, rgb_img, mask)
+
+
 def show_text(strip, text, offset, wrap, text_color, bg_color, mask):
     rgb_img = tc.get_text_image(text, HAT_WIDTH, HAT_HEIGHT, offset, wrap, False, text_color, bg_color)
     show_rgb_image(strip, rgb_img, mask)

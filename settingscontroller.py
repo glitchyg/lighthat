@@ -1,5 +1,6 @@
 from neopixel import Color, PColor
 
+MODE_NONE = -1
 MODE_TEXT = 0
 MODE_COLOR_WIPE = 1
 MODE_CHASE = 2
@@ -33,6 +34,10 @@ default_settings = {
     "gradient_speed": 1,
     "gradient_color_from": (0, 255, 0),
     "gradient_color_to": (255, 0, 0),
+    "none_show_strip": False,
+    "none_delay": 500,
+    "gif_show": False,
+    "gif_image": "test.gif",
 }
 
 modes = {
@@ -180,9 +185,16 @@ modes = {
         "image_mask": True,
         "gradient_show": True,
         "gradient_speed": 20,
-        "gradient_color_from": (87, 255, 150), # G, R, B
+        "gradient_color_from": (87, 255, 150),  # G, R, B
         # "gradient_color_from": (233, 87, 246), # G, R, B
         "gradient_color_to": (174, 83, 230),
+    },
+    "giftest": {
+        "mode": MODE_NONE,
+        "none_show_strip": True,
+        "none_delay": 500,
+        "gif_show": True,
+        "gif_image": "test.gif",
     },
 }
 

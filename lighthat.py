@@ -28,12 +28,12 @@ def main_state_thread(settings):
 
     thread.start_new_thread(web.web_interface_thread, (settings, strip))
 
-    settings = sc.start_mode(settings, "kimbra")
+    settings = sc.start_mode(settings, "giftest")
     run_counter = 0
     last_mode_button_state = False
     hat_display.fill(strip, 0)
     strip.show()
-    total_delay = 0;
+    total_delay = 0
 
     while True:
         mode = (settings["mode"])
@@ -48,6 +48,9 @@ def main_state_thread(settings):
             color_from = settings["gradient_color_from"]
             color_to = settings["gradient_color_to"]
             hat_display.gradient(strip, run_counter, speed, color_from, color_to)
+        if settings["gif_show"]:
+            hat_display.show_gif(strip, settings["gif_image"], run_counter, False)
+
 
         #  --------  MODE TEXT AND CHASE --------
         if mode == sc.MODE_TEXT_AND_CHASE:
@@ -90,6 +93,12 @@ def main_state_thread(settings):
             hat_display.show_image(strip, settings["image_file"], mask)
             if settings["image_show_strip"]:
                 strip.show()
+
+        #  --------  MODE NONE --------
+        if mode == sc.MODE_NONE:
+            if settings["none_show_strip"]:
+                strip.show()
+            total_delay += settings["none_delay"]
 
         # Take all the time we wanted to delay and do it at the end
         time.sleep(total_delay / 1000.0)

@@ -5,12 +5,54 @@ from PIL import ImageDraw
 last_image_file = None
 last_image_data = None
 
+last_gif_file = None
+last_gif_data = None
+last_gif_frame_data = None
+last_gif_frame = 0
+
+
+# for frame in range(0,imageObject.n_frames):
+#
+#     imageObject.seek(frame)
+#
+#     imageObject.show()
+
+
+def get_gif(file, frame):
+    global last_gif_file, last_gif_data, last_gif_frame, last_gif_frame_data
+
+    # img = None
+
+    if file == last_gif_file:
+        img = last_gif_data
+    else:
+        img = Image.open(file)
+        last_gif_data = img
+
+    last_gif_file = file
+
+    if frame == last_gif_frame:
+        return last_gif_frame_data
+
+    if img.is_animated:
+        frame = frame % img.n_frames
+        img.seek(frame)
+        img.show()
+
+    rgb_img = img.convert('RGB')
+
+    last_gif_frame_data = rgb_img
+
+    return rgb_img
+
 
 def get_image(file):
     global last_image_data, last_image_file
 
     if file == last_image_file:
         return last_image_data
+
+    last_image_file = file
 
     img = Image.open(file)
     rgb_img = img.convert('RGB')
