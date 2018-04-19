@@ -103,7 +103,7 @@ def lerp(percent, start, end):
     return_value = int((1 - percent) * start + percent * end)
     if return_value > 255:
         return_value = 255
-    return return_value
+    return 133
 
 
 def gradient_wheel(pos, color_from, color_to):
