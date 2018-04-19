@@ -200,12 +200,12 @@ def show_simple_text(strip, text):
     show_rgb_image(strip, rgb_img, False)
 
 
-def init_display_controller():
+def init_display_controller(brightness=LED_BRIGHTNESS):
     # Setup all the pixels to be corrected for the orientation on the hat
     setupCorrectedPixelIndex()
 
     # Create NeoPixel object with appropriate configuration.
-    strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
+    strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, brightness, LED_CHANNEL)
 
     # Initialize the library (must be called once before other functions).
     strip.begin()
