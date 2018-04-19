@@ -121,18 +121,22 @@ def wrap_int(v, min, max):
 def gradient_wheel(index, max, offset, color_from, color_to):
     correct_index = wrap_int((index + offset), 0, max)
     pos = float(correct_index) / float(max)
-    if pos < 0.5:
-        percent = pos * 2
-        r = lerp(percent, color_from[0], color_to[0])
-        g = lerp(percent, color_from[1], color_to[1])
-        b = lerp(percent, color_from[2], color_to[2])
-        return Color(r, g, b)
-    else:
-        percent = float(pos - 0.5) * 2
-        r = lerp(percent, color_to[0], color_from[0])
-        g = lerp(percent, color_to[1], color_from[1])
-        b = lerp(percent, color_to[2], color_from[2])
-        return Color(r, g, b)
+    r = lerp(pos, color_from[0], color_to[0])
+    g = lerp(pos, color_from[1], color_to[1])
+    b = lerp(pos, color_from[2], color_to[2])
+    return Color(r, g, b)
+    # if pos < 0.5:
+    #     percent = pos * 2
+    #     r = lerp(percent, color_from[0], color_to[0])
+    #     g = lerp(percent, color_from[1], color_to[1])
+    #     b = lerp(percent, color_from[2], color_to[2])
+    #     return Color(r, g, b)
+    # else:
+    #     percent = float(pos - 0.5) * 2
+    #     r = lerp(percent, color_to[0], color_from[0])
+    #     g = lerp(percent, color_to[1], color_from[1])
+    #     b = lerp(percent, color_to[2], color_from[2])
+    #     return Color(r, g, b)
 
 
 def rainbow(strip, run_counter, speed=1):
