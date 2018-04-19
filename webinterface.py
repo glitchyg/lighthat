@@ -13,4 +13,4 @@ def hello():
 def web_interface_thread(settings, input_strip):
     global strip
     strip = input_strip
-    app.run()
+    app.run(host='0.0.0.0')
