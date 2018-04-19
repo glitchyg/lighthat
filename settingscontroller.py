@@ -180,6 +180,8 @@ modes = {
         "image_mask": True,
         "gradient_show": True,
         "gradient_speed": 4,
+        "gradient_color_from": (233, 87, 246),
+        "gradient_color_to": (255, 0, 0),
     },
 }
 

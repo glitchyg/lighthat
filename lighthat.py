@@ -32,7 +32,7 @@ def main_state_thread(settings):
 
     while True:
         mode = (settings["mode"])
-        total_delay = 0
+        total_delay = 50
 
         #  --------  ADDONS --------
         if settings["rainbow_show"]:
