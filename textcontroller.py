@@ -37,7 +37,6 @@ def get_gif(file, frame):
     if img.is_animated:
         frame = frame % img.n_frames
         img.seek(frame)
-        img.show()
 
     rgb_img = img.convert('RGB')
 
