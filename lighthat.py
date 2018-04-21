@@ -100,6 +100,11 @@ def main_state_thread(settings):
                 strip.show()
             total_delay += settings["none_delay"]
 
+        # Take all the time we wanted to delay and do it at the end
+        time.sleep(total_delay / 1000.0)
+
+        run_counter += 1
+
         # Check for mode change
         input_state = GPIO.input(16)
         if input_state == False and last_mode_button_state == True:
@@ -122,11 +127,6 @@ def main_state_thread(settings):
             settings = sc.merge_two_dicts(settings, web_settings)
 
         last_mode_button_state = input_state
-
-        # Take all the time we wanted to delay and do it at the end
-        time.sleep(total_delay / 1000.0)
-
-        run_counter += 1
 
 
 # Main program logic follows:
