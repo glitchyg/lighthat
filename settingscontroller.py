@@ -189,12 +189,12 @@ modes = {
         # "gradient_color_from": (233, 87, 246), # G, R, B
         "gradient_color_to": (174, 83, 230),
     },
-    "giftest": {
+    "back_to_future": {
         "mode": MODE_NONE,
         "none_show_strip": True,
-        "none_delay": 500,
+        "none_delay": 175,
         "gif_show": True,
-        "gif_image": "test.gif",
+        "gif_image": "btf.gif",
     },
     "kimbragif0": {
         "mode": MODE_NONE,
@@ -205,7 +205,7 @@ modes = {
     },
 }
 
-mode_playlist = ["default", "kimbra", "kimbragif0", "light_city_2", "adventure_time", "sonic", "rainbow", "openworks",
+mode_playlist = ["default", "back_to_future", "kimbra", "kimbragif0", "light_city_2", "adventure_time", "sonic", "rainbow", "openworks",
                  "cats", "mario", "matrix"]
 
 current_mode = 0
