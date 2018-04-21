@@ -192,7 +192,7 @@ modes = {
     "back_to_future": {
         "mode": MODE_NONE,
         "none_show_strip": True,
-        "none_delay": 175,
+        "none_delay": 75,
         "gif_show": True,
         "gif_image": "btf.gif",
     },
