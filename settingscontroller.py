@@ -205,8 +205,7 @@ modes = {
     },
 }
 
-mode_playlist = ["default", "back_to_future", "kimbra", "kimbragif0", "light_city_2", "adventure_time", "sonic", "rainbow", "openworks",
-                 "cats", "mario", "matrix"]
+mode_playlist = ["back_to_future", "adventure_time", "sonic", "rainbow", "cats", "mario", "matrix"]
 
 current_mode = 0
 
