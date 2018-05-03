@@ -71,7 +71,7 @@ modes = {
     },
     "default": {
         "mode": MODE_TEXT_AND_CHASE,
-        "text": "LIGHT CITY",
+        "text": "WTMD",
         "text_bg_color": (0, 0, 0),
         "text_text_color": (255, 255, 255),
         "text_start_offset": 23,
@@ -205,7 +205,7 @@ modes = {
     },
 }
 
-mode_playlist = ["back_to_future", "adventure_time", "sonic", "rainbow", "cats", "mario", "matrix"]
+mode_playlist = ["default", "back_to_future", "adventure_time", "sonic", "rainbow", "cats", "mario", "matrix"]
 
 current_mode = 0
 
