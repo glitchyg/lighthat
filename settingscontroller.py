@@ -205,7 +205,7 @@ modes = {
     },
 }
 
-mode_playlist = ["default", "case", "wipe", "back_to_future", "adventure_time", "sonic", "rainbow", "cats", "mario", "matrix"]
+mode_playlist = ["default", "chase", "wipe", "back_to_future", "adventure_time", "sonic", "rainbow", "cats", "mario", "matrix"]
 
 current_mode = 0
 
