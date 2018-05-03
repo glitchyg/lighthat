@@ -26,6 +26,13 @@ def set_brightness(brightness):
     return "Brightness set to: " + str(brightness)
 
 
+@app.route('/chase_color/<int:color>')
+def set_color(color):
+    settings = {"chase_color": color}
+    set_settings_update(settings)
+    return "Set chase color to: " + str(color)
+
+
 def web_interface_thread(settings, input_strip):
     global strip
     strip = input_strip
