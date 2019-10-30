@@ -215,7 +215,7 @@ modes = {
     "hulu2": {
             "mode": MODE_NONE,
             "none_show_strip": True,
-            "none_delay": 1500,
+            "none_delay": 200,
             "gif_show": True,
             "gif_image": "hulu.gif",
         },
