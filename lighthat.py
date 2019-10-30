@@ -33,7 +33,7 @@ def main_state_thread(settings):
     last_mode_button_state = False
     hat_display.fill(strip, 0)
     strip.show()
-    strip.setBrightness(20)
+    strip.setBrightness(30)
     total_delay = 0
 
     while True:
