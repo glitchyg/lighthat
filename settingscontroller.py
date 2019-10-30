@@ -71,7 +71,7 @@ modes = {
     },
     "default": {
         "mode": MODE_TEXT_AND_CHASE,
-        "text": "HUUUULLUU",
+        "text": "HUULUU",
         "text_bg_color": (0, 0, 0),
         "text_text_color": (255, 92, 0),
         "text_start_offset": 23,
@@ -211,14 +211,21 @@ modes = {
         "gif_image": "hulu.gif",
     },
     "ween1": {
-            "mode": MODE_IMAGE,
-            "image_show": True,
-            "image_file": "ween1.jpg",
-            "image_show_strip": True,
-        },
+        "mode": MODE_IMAGE,
+        "image_show": True,
+        "image_file": "ween1.jpg",
+        "image_show_strip": True,
+    },
+    "blink": {
+        "mode": MODE_NONE,
+        "none_show_strip": True,
+        "none_delay": 30,
+        "gif_show": True,
+        "gif_image": "blink.gif",
+    },
 }
 
-mode_playlist = ["hulu1", "ween1", "default"]
+mode_playlist = ["hulu1", "ween1", "blink", "default"]
 
 current_mode = 0
 
