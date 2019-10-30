@@ -219,7 +219,7 @@ modes = {
     "blink": {
         "mode": MODE_NONE,
         "none_show_strip": True,
-        "none_delay": 30,
+        "none_delay": 100,
         "gif_show": True,
         "gif_image": "blink.gif",
     },
