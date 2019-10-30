@@ -71,7 +71,7 @@ modes = {
     },
     "default": {
         "mode": MODE_TEXT_AND_CHASE,
-        "text": "WTMD",
+        "text": "HULU",
         "text_bg_color": (0, 0, 0),
         "text_text_color": (255, 255, 255),
         "text_start_offset": 23,
@@ -210,9 +210,15 @@ modes = {
         "gif_show": True,
         "gif_image": "hulu.gif",
     },
+    "ween1": {
+            "mode": MODE_IMAGE,
+            "image_show": True,
+            "image_file": "ween1.jpg",
+            "image_show_strip": True,
+        },
 }
 
-mode_playlist = ["hulu1", "hulu2", "back_to_future", "adventure_time", "sonic", "rainbow", "cats", "mario", "matrix"]
+mode_playlist = ["hulu1", "ween1", "default"]
 
 current_mode = 0
 
