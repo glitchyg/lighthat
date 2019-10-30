@@ -204,21 +204,12 @@ modes = {
         "gif_image": "kimbra0.gif",
     },
     "hulu1": {
-        "mode": MODE_TEXT,
-        "text": "HULU HAS LIVE SPORTS",
-        "text_bg_color": (24, 73, 24),
-        "text_text_color": (0, 0, 0),
-        "text_start_offset": 23,
-        "text_scroll_speed": 2,
-        "text_show_strip": True
+        "mode": MODE_NONE,
+        "none_show_strip": True,
+        "none_delay": 30,
+        "gif_show": True,
+        "gif_image": "hulu.gif",
     },
-    "hulu2": {
-            "mode": MODE_NONE,
-            "none_show_strip": True,
-            "none_delay": 20,
-            "gif_show": True,
-            "gif_image": "hulu.gif",
-        },
 }
 
 mode_playlist = ["hulu1", "hulu2", "back_to_future", "adventure_time", "sonic", "rainbow", "cats", "mario", "matrix"]
