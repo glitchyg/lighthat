@@ -28,11 +28,12 @@ def main_state_thread(settings):
 
     thread.start_new_thread(web.web_interface_thread, (settings, strip))
 
-    settings = sc.start_mode(settings, "default")
+    settings = sc.start_mode(settings, "hulu1")
     run_counter = 0
     last_mode_button_state = False
     hat_display.fill(strip, 0)
     strip.show()
+    strip.setBrightness(20)
     total_delay = 0
 
     while True:
